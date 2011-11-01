@@ -1,0 +1,422 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Gentium";
+  font-size: 18px;
+  line-height: 1.5em;
+  margin: 0 auto 2em;
+  max-width: 980px;
+  min-width: 40em;
+}
+
+body > header h1 {
+  float: left;
+  font: bold 200%/1.125em 'Linux Biolinum O';
+  font-weight: normal;
+  margin: 0.125em 0 0;
+}
+
+h1 {
+  font-size: 183.3333%;
+}
+
+h2 {
+  font-size: 150%;
+}
+
+h3 {
+  font-size: 133.3333%;
+}
+
+h4 {
+  font-size: 116.6667%;
+}
+
+h5 {
+  font-size: 100%;
+}
+
+h6 {
+  font-size: 88.8889%;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.05em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Linux Biolinum Capitals O";
+  /* font-variant: small-caps; */
+  line-height: 1.125em;
+  margin: 1em 0 0.6667em;
+}
+
+body > aside {
+  font-family: "Linux Biolinum O";
+}
+
+section > section h1 {
+  font-size: 137.5%;
+}
+
+section > section h2 {
+  font-size: 125%;
+}
+
+section > section h3 {
+  font-size: 112.5%;
+}
+
+section > section h4 {
+  font-size: 100%;
+}
+
+section > section h5 {
+  font-size: 87.5%;
+}
+
+section > section h6 {
+  font-size: 75%;
+}
+
+p {
+  margin: 0.6667em 0 0;
+  word-spacing: 0.05em;
+  word-wrap: break-word;
+}
+
+p:not(.discreet):not(.document-authorship) + p {
+  text-indent: 1.5em;
+  margin-top: 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+ol,
+ul {
+  padding-left: 2.25em;
+  margin: 1em 0;
+}
+
+ul ol,
+ol ul,
+ol ol,
+ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  list-style-position: outside;
+}
+
+section aside {
+  float: right;
+  font: 16px/1.5em "Linux Biolinum O";
+  margin-left: 1.75em;
+  margin-bottom: 1.75em;
+  margin-top: 0.75em;
+  padding: 1em;
+  width: 33%;
+}
+
+section aside h1:first-child,
+section aside h2:first-child,
+section aside h3:first-child,
+section aside h4:first-child,
+section aside h5:first-child,
+section aside h6:first-child {
+  margin-top: 0;
+}
+
+abbr, acronym {
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+}
+
+code,
+pre {
+  font-family: "Ubuntu Mono","DejaVu Sans Mono","Inconsolata","Consolas",monospace;
+  font-size: 88.8889%;
+}
+
+pre {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 1em;
+  margin: 1.5em;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 1.5em;
+  padding: 1em 2em;
+  position: relative;
+}
+
+blockquote em {
+  font-style: normal;
+}
+
+blockquote:before {
+  content: "\201c";
+  margin-right: -2em;
+  position: absolute;
+  right: 100%;
+}
+
+blockquote:after {
+  content: "\201d";
+}
+
+blockquote q:before {
+  content: "\2018";
+}
+
+blockquote q:after {
+  content: "\2019";
+}
+
+blockquote.verse {
+  padding-left: 0;
+  padding-right: 0;
+  position: static;
+}
+
+blockquote.verse:before {
+  content: "";
+}
+
+blockquote.verse:after {
+  content: "";
+}
+
+.verse pre {
+  display: table;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0 auto;
+  padding: 0;
+  width: auto;
+}
+
+body > header > * {
+  position: relative;
+}
+
+dd {
+  margin-left: 2.25em;
+}
+
+body > header {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 980px;
+  min-width: 40em;
+  margin: 0 auto;
+  padding: 0.75em 1.5em;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+body > header nav,
+#searchbox {
+  float: right;
+}
+
+body > header nav {
+  clear: right;
+  font-family: "Linux Biolinum O";
+}
+
+#searchbox {
+  margin-bottom: 0.5em;
+}
+
+nav ul {
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li a {
+  padding: 0 1em;
+}
+
+body > header nav li {
+  margin-left: 0.5em;
+}
+
+body > header nav li.selected a {
+  position: relative;
+}
+
+body > header nav li.selected a:before {
+  bottom: -0.25em;
+  content: "\2022";
+  font-size: 88.8888%;
+  left: 0;
+  line-height: 0.5em;
+  height: 0.5em;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+.quantity {
+  font-weight: normal !important;
+  font-style: normal !important;
+  white-space: nowrap;
+}
+
+.discreet,
+.document-authorship {
+  font-family: "Linux Biolinum O";
+  font-size: 88.8888%;
+}
+
+p.discreet,
+p.document-authorship {
+  margin: 0.6667em 0 1em !important;
+  text-indent: 0 !important;
+}
+
+.discreet {
+  cursor: default;
+}
+
+.document-description {
+  font-style: italic;
+}
+
+/* Couldn't find a better way to prevent few-contented pages to not shrink due
+ * to display: table-cell... */
+body > section:before {
+  content: "a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a";
+  display: block;
+  height: 0;
+  speak: none;
+  visibility: hidden;
+}
+
+body > section {
+  display: table-cell;
+  padding: 1.5em;
+  vertical-align: top;
+}
+
+body > section + aside {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: table-cell;
+  font-size: 16px;
+  line-height: 1.5em;
+  padding: 2.5em 0;
+  vertical-align: top;
+  width: 26%;
+}
+
+body > section .document-authorship + p:not(.discreet):first-line,
+body > section .document-authorship + .discreet + p:first-line,
+body > section h1 + p:not(.document-description):first-line {
+  font-size: 111.1111%;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+}
+
+body > section > h1:nth-of-type(1) {
+  margin-top: 0;
+}
+
+body > section > section {
+  margin: 1em -1.5em -1.5em;
+  padding: 0 1.5em 1px;
+}
+
+body > footer {
+  font-family: "Linux Biolinum O";
+  font-size: 77.7778%;
+  padding-bottom: 1.5em;
+  padding-top: 0.5em;
+}
+
+body > footer p {
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+body > footer nav {
+  text-align: center;
+}
+
+body > footer nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+body > aside > section {
+  margin: 0 0 1em;
+  padding: 0 1em;
+}
+
+body > aside > section > header {
+  font-weight: bold;
+  text-align: center;
+}
+
+body > aside > section > header,
+body > aside > section > section {
+  margin: 0;
+  padding: 1em;
+}
+
+body > aside > section > footer {
+  margin: 0;
+  padding: 0.25em 1em;
+  text-align: right;
+}
+
+body > aside > section > nav ul {
+  padding-left: 0;
+}
+
+body > aside > section > nav ul ul {
+  margin-left: 0.5em;
+}
+
+body > aside > section > nav li {
+  list-style: none;
+  display: block;
+}
+
+body > aside > section > nav li a {
+  display: block;
+  padding: 0.25em 0.5em;
+}
+
+body > aside > section > nav li.selected > a:before {
+  content: "\2022";
+  display: inline-block;
+  margin-left: -0.5em;
+  text-align: center;
+  width: 0.5em;
+}
+
+.invisible {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}

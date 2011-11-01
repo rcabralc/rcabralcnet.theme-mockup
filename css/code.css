@@ -1,0 +1,23 @@
+.keyword {
+  color: #cc7833;
+}
+
+.define {
+  color: #cc7833;
+}
+
+.number {
+  color: #a5c261;
+}
+
+.string {
+  color: #a5c261;
+}
+
+.string-delimiter {
+  color: #519F50;
+}
+
+.comment {
+  color: #888;
+}
