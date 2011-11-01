@@ -12,13 +12,6 @@ body {
   min-width: 40em;
 }
 
-body > header h1 {
-  float: left;
-  font: bold 200%/1.125em 'Linux Biolinum O';
-  font-weight: normal;
-  margin: 0.125em 0 0;
-}
-
 h1 {
   font-size: 183.3333%;
 }
@@ -52,6 +45,19 @@ h1, h2, h3, h4, h5, h6 {
   /* font-variant: small-caps; */
   line-height: 1.125em;
   margin: 1em 0 0.6667em;
+}
+
+body > header h1 {
+  float: left;
+  font: bold 200%/1.125em 'Linux Biolinum O';
+  font-weight: normal;
+  margin: 0.125em 0 0;
+}
+
+body > header h1 a {
+  display: inline-block;
+  height: 64px;
+  line-height: 64px;
 }
 
 body > aside {
@@ -238,7 +244,7 @@ body > header nav {
 }
 
 #searchbox {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.75em;
 }
 
 nav ul {
@@ -257,16 +263,22 @@ body > header nav li {
   margin-left: 0.5em;
 }
 
+body > header nav li a {
+  display: inline-block;
+  height: 1.75em;
+  line-height: 1.5em;
+}
+
 body > header nav li.selected a {
   position: relative;
 }
 
 body > header nav li.selected a:before {
-  bottom: -0.25em;
+  bottom: 0;
   content: "\2022";
   font-size: 88.8888%;
   left: 0;
-  line-height: 0.5em;
+  line-height: 0.25em;
   height: 0.5em;
   position: absolute;
   right: 0;

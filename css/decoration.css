@@ -20,6 +20,25 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.75);
 }
 
+a {
+  border-bottom: 1px dotted #a06060;
+  color: red;
+     -moz-transition: color 0.5s, border-color 0.5s, text-shadow 0.5s;
+  -webkit-transition: color 0.5s, border-color 0.5s, text-shadow 0.5s;
+          transition: color 0.5s, border-color 0.5s, text-shadow 0.5s;
+  text-decoration: none;
+  text-shadow: 0 1em 0 transparent;
+}
+
+a:visited {
+  opacity: 0.5;
+}
+
+a:hover {
+  color: #ffffd0;
+  text-shadow: 0 0 0.5em red, 0 0 0.25em white;
+}
+
 section aside h1, section aside h2, section aside h3, section aside h4, section aside h5, section aside h6,
 section aside h1 :link, section aside h2 :link, section aside h3 :link, section aside h4 :link, section aside h5 :link, section aside h6 :link,
 section aside h1 :visited, section aside h2 :visited, section aside h3 :visited, section aside h4 :visited, section aside h5 :visited, section aside h6 :visited {
@@ -47,8 +66,6 @@ body > header {
 }
 
 body > header h1 a {
-  border: none;
-  color: #ffffd0;
   display: inline-block;
   height: 64px;
   line-height: 64px;
@@ -56,17 +73,12 @@ body > header h1 a {
 
 body > header h1 a,
 body > header nav li a {
+  border: none;
   color: #ffffd0;
 }
 
-body > header nav .selected {
-  box-shadow: 0 0 0.5em rgba(255, 0, 0, 0.375), 0 0 0.25em rgba(255, 255, 255, 0.375);
-  padding: 0.25em 0.5em;
-}
-
-body > header nav .selected a {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+body > header nav li a:hover {
+  border: none;
 }
 
 body > header nav .selected a,
@@ -75,26 +87,11 @@ body > header nav .selected a:visited {
   border-color: transparent;
 }
 
-section aside {
-}
-
-a {
-  border-bottom: 1px dotted #a06060;
-  color: red;
-     -moz-transition: color 0.5s, border-color 0.5s, text-shadow 0.5s;
-  -webkit-transition: color 0.5s, border-color 0.5s, text-shadow 0.5s;
-          transition: color 0.5s, border-color 0.5s, text-shadow 0.5s;
-  text-decoration: none;
-  text-shadow: 0 1em 0 transparent;
-}
-
-a:visited {
-  opacity: 0.5;
-}
-
-a:hover {
-  color: #ffffd0;
+body > header nav .selected a:before {
   text-shadow: 0 0 0.5em red, 0 0 0.25em white;
+}
+
+section aside {
 }
 
 body > header nav a:hover,
