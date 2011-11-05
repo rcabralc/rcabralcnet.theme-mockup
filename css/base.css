@@ -1,4 +1,27 @@
-@import url(http://fonts.googleapis.com/css?family=Gentium+Basic:400,400italic,700,700italic&subset=latin,latin-ext);
+@font-face {
+  font-family: 'Gentium Basic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gentium Basic'), local('GentiumBasic'), url('../fonts/GenBasR.ttf');
+}
+@font-face {
+  font-family: 'Gentium Basic';
+  font-style: italic;
+  font-weight: normal;
+  src: local('Gentium Basic Italic'), local('GentiumBasic-Italic'), url('../fonts/GenBasI.ttf');
+}
+@font-face {
+  font-family: 'Gentium Basic';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Gentium Basic Bold'), local('GentiumBasic-Bold'), url('../fonts/GenBasB.ttf');
+}
+@font-face {
+  font-family: 'Gentium Basic';
+  font-style: italic;
+  font-weight: bold;
+  src: local('Gentium Basic Bold Italic'), local('GentiumBasic-BoldItalic'), url('../fonts/GenBasBI.ttf');
+}
 
 html {
   min-height: 100%;
@@ -6,7 +29,7 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: "Gentium Basic";
+  font-family: "Gentium";
   font-size: 18px;
   line-height: 1.5em;
   margin: 0 auto 2em;
@@ -62,7 +85,16 @@ body > header h1 a {
   line-height: 64px;
 }
 
-body > aside {
+body > section strong,
+body > section strong em,
+body > section em strong,
+body > section dt {
+  font-family: "Gentium Basic";
+}
+
+body > section aside,
+body > section aside strong,
+body > section aside em {
   font-family: "Linux Biolinum O";
 }
 
