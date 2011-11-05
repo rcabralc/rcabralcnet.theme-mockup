@@ -47,8 +47,15 @@ section aside h1 :visited, section aside h2 :visited, section aside h3 :visited,
 }
 
 body > header:before {
+  background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
+  background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
+  background-image:     -ms-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
+  background-image:      -o-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
+  background-image:         linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
+  background-image: -webkit-gradient(linear, center top, center bottom, from(rgba(0, 0, 0, 0.75)), to(transparent));
   background-color: rgba(16, 0, 0, 0.875);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.063);
+  border-bottom: 1px solid rgba(255, 106, 106, 0.1);
   box-shadow: 0 1.5em 3em rgba(0, 0, 0, 0.875);
   content: "";
   height: 5.5em;
