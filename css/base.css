@@ -155,6 +155,10 @@ pre {
   font-size: 88.8889%;
 }
 
+pre > code {
+  font-size: 100%;
+}
+
 pre {
   font-size: 14px;
   line-height: 20px;
