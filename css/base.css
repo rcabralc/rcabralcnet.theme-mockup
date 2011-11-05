@@ -92,6 +92,7 @@ body > section dt {
   font-family: "Gentium Basic";
 }
 
+body > aside,
 body > section aside,
 body > section aside strong,
 body > section aside em {
