@@ -27,14 +27,122 @@ html {
   min-height: 100%;
 }
 
+@media screen and (max-width: 320px) {
+  body > section {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 320px) {
+
+  body {
+    max-width: 320px;
+  }
+
+  blockquote {
+    margin: 1em;
+    padding: 1em;
+  }
+
+  blockquote:before {
+    /* Left quote margin */
+    margin-right: -1em;
+  }
+
+  pre {
+    font-size: 66.6667%;
+  }
+
+  body > section {
+    font-size: 16px;
+  }
+
+  section aside {
+    margin: 1em;
+    padding: 1em;
+  }
+
+}
+
+@media screen and (min-width: 480px) {
+
+  body {
+    max-width: 480px;
+  }
+
+  section aside {
+    float: right;
+    font: 16px/1.5em "Linux Biolinum O";
+    margin-left: 1.75em;
+    margin-bottom: 1.75em;
+    margin-right: 0;
+    margin-top: 0.75em;
+    width: 33%;
+  }
+
+}
+
+@media screen and (min-width: 600px) {
+
+  body {
+    max-width: 600px;
+  }
+
+}
+
+@media screen and (min-width: 980px) {
+
+  body {
+    max-width: 980px;
+  }
+
+  blockquote {
+    margin: 1.5em;
+    padding: 1em 2em;
+  }
+
+  blockquote:before {
+    /* Left quote margin */
+    margin-right: -2em;
+  }
+
+  pre {
+    font-size: 77.7778%;
+  }
+
+  body > section {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  /* Couldn't find a better way to prevent few-contented pages to not shrink due
+  * to display: table-cell... */
+  body > section:before {
+    content: "a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a";
+    display: block;
+    height: 0;
+    speak: none;
+    visibility: hidden;
+  }
+
+  body > section + aside {
+    display: table-cell;
+    vertical-align: top;
+    width: 26%;
+  }
+
+  body > section {
+    font-size: 18px;
+  }
+
+}
+
 body {
   box-sizing: border-box;
   font-family: "Gentium";
   font-size: 18px;
   line-height: 1.5em;
   margin: 0 auto 2em;
-  max-width: 980px;
-  min-width: 40em;
 }
 
 h1 {
@@ -72,57 +180,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 1em 0 0.6667em;
 }
 
-body > header h1 {
-  float: left;
-  font: bold 200%/1.125em 'Linux Biolinum O';
-  font-weight: normal;
-  margin: 0.125em 0 0;
-}
-
-body > header h1 a {
-  display: inline-block;
-  height: 64px;
-  line-height: 64px;
-}
-
-body > section strong,
-body > section strong em,
-body > section em strong,
-body > section dt {
-  font-family: "Gentium Basic";
-}
-
-body > aside,
-body > section aside,
-body > section aside strong,
-body > section aside em {
-  font-family: "Linux Biolinum O";
-}
-
-section > section h1 {
-  font-size: 137.5%;
-}
-
-section > section h2 {
-  font-size: 125%;
-}
-
-section > section h3 {
-  font-size: 112.5%;
-}
-
-section > section h4 {
-  font-size: 100%;
-}
-
-section > section h5 {
-  font-size: 87.5%;
-}
-
-section > section h6 {
-  font-size: 75%;
-}
-
 p {
   margin: 0.6667em 0 0;
   word-spacing: 0.05em;
@@ -157,25 +214,6 @@ ol {
   list-style-position: outside;
 }
 
-section aside {
-  float: right;
-  font: 16px/1.5em "Linux Biolinum O";
-  margin-left: 1.75em;
-  margin-bottom: 1.75em;
-  margin-top: 0.75em;
-  padding: 1em;
-  width: 33%;
-}
-
-section aside h1:first-child,
-section aside h2:first-child,
-section aside h3:first-child,
-section aside h4:first-child,
-section aside h5:first-child,
-section aside h6:first-child {
-  margin-top: 0;
-}
-
 abbr, acronym {
   font-variant: small-caps;
   letter-spacing: 0.05em;
@@ -185,6 +223,9 @@ abbr, acronym {
 code,
 pre {
   font-family: "Ubuntu Mono","DejaVu Sans Mono","Inconsolata","Consolas",monospace;
+}
+
+code {
   font-size: 88.8889%;
 }
 
@@ -193,16 +234,14 @@ pre > code {
 }
 
 pre {
-  font-size: 14px;
   line-height: 20px;
   padding: 1em;
   margin: 1.5em;
+  white-space: pre-wrap;
 }
 
 blockquote {
   font-style: italic;
-  margin: 1.5em;
-  padding: 1em 2em;
   position: relative;
 }
 
@@ -212,7 +251,6 @@ blockquote em {
 
 blockquote:before {
   content: "\201c";
-  margin-right: -2em;
   position: absolute;
   right: 100%;
 }
@@ -252,24 +290,25 @@ blockquote.verse:after {
   width: auto;
 }
 
-body > header > * {
-  position: relative;
-}
-
 dd {
   margin-left: 2.25em;
 }
 
 body > header {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  max-width: 980px;
-  min-width: 40em;
-  margin: 0 auto;
   padding: 0.75em 1.5em;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+}
+
+body > header h1 {
+  float: left;
+  font: bold 200%/1.125em 'Linux Biolinum O';
+  font-weight: normal;
+  margin: 0.125em 0 0;
+}
+
+body > header h1 a {
+  display: inline-block;
+  height: 64px;
+  line-height: 64px;
 }
 
 body > header nav,
@@ -324,57 +363,64 @@ body > header nav li.selected a:before {
   text-align: center;
 }
 
-.quantity {
-  font-weight: normal !important;
-  font-style: normal !important;
-  white-space: nowrap;
+body > section strong,
+body > section strong em,
+body > section em strong,
+body > section dt {
+  font-family: "Gentium Basic";
 }
 
-.discreet,
-.document-authorship {
+body > aside,
+body > section aside,
+body > section aside strong,
+body > section aside em {
   font-family: "Linux Biolinum O";
-  font-size: 88.8888%;
 }
 
-p.discreet,
-p.document-authorship {
-  margin: 0.6667em 0 1em !important;
-  text-indent: 0 !important;
+section > section h1 {
+  font-size: 137.5%;
 }
 
-.discreet {
-  cursor: default;
+section > section h2 {
+  font-size: 125%;
 }
 
-.document-description {
-  font-style: italic;
+section > section h3 {
+  font-size: 112.5%;
 }
 
-/* Couldn't find a better way to prevent few-contented pages to not shrink due
- * to display: table-cell... */
-body > section:before {
-  content: "a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a";
-  display: block;
-  height: 0;
-  speak: none;
-  visibility: hidden;
+section > section h4 {
+  font-size: 100%;
+}
+
+section > section h5 {
+  font-size: 87.5%;
+}
+
+section > section h6 {
+  font-size: 75%;
+}
+
+section aside h1:first-child,
+section aside h2:first-child,
+section aside h3:first-child,
+section aside h4:first-child,
+section aside h5:first-child,
+section aside h6:first-child {
+  margin-top: 0;
 }
 
 body > section {
-  display: table-cell;
+  clear: both;
   padding: 1.5em;
-  vertical-align: top;
 }
 
 body > section + aside {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  display: table-cell;
   font-size: 16px;
   line-height: 1.5em;
   padding: 2.5em 0;
-  vertical-align: top;
-  width: 26%;
 }
 
 body > section .document-authorship + p:not(.discreet):first-line,
@@ -461,6 +507,32 @@ body > aside > section > nav li.selected > a:before {
   margin-left: -0.5em;
   text-align: center;
   width: 0.5em;
+}
+
+.quantity {
+  font-weight: normal !important;
+  font-style: normal !important;
+  white-space: nowrap;
+}
+
+.discreet,
+.document-authorship {
+  font-family: "Linux Biolinum O";
+  font-size: 88.8888%;
+}
+
+p.discreet,
+p.document-authorship {
+  margin: 0.6667em 0 1em !important;
+  text-indent: 0 !important;
+}
+
+.discreet {
+  cursor: default;
+}
+
+.document-description {
+  font-style: italic;
 }
 
 .invisible {

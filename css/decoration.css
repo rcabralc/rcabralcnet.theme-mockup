@@ -12,7 +12,6 @@ body {
   background-color: rgba(0, 0, 0, 0.75);
   box-shadow: 0 1em 2.5em rgba(0, 0, 0, 0.875);
   color: #ffffd0;
-  margin-top: 6.5em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,30 +46,50 @@ section aside h1 :visited, section aside h2 :visited, section aside h3 :visited,
   text-shadow: none;
 }
 
-body > header:before {
-  background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
-  background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
-  background-image:     -ms-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
-  background-image:      -o-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
-  background-image:         linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
-  background-image: -webkit-gradient(linear, center top, center bottom, from(rgba(0, 0, 0, 0.75)), to(transparent));
-  background-color: rgba(16, 0, 0, 0.875);
-  border-bottom: 1px solid rgba(255, 106, 106, 0.1);
-  box-shadow: 0 1.5em 3em rgba(0, 0, 0, 0.875);
-  content: "";
-  height: 5.5em;
-  left: 0;
-  margin: 0 -1.5em;
-  padding: 0 1.5em;
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 100%;
-}
+@media screen and (min-width: 980px) {
 
-body > header {
-  position: fixed;
+  body {
+    margin-top: 6.5em;
+  }
+
+  body > header {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 980px;
+    min-width: 40em;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  body > header:before {
+    background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
+    background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
+    background-image:     -ms-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
+    background-image:      -o-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
+    background-image:         linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(rgba(0, 0, 0, 0.75)), to(transparent));
+    background-color: rgba(16, 0, 0, 0.875);
+    border-bottom: 1px solid rgba(255, 106, 106, 0.1);
+    box-shadow: 0 1.5em 3em rgba(0, 0, 0, 0.875);
+    content: "";
+    height: 5.5em;
+    left: 0;
+    margin: 0 -1.5em;
+    padding: 0 1.5em;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  body > header > * {
+    position: relative;
+  }
+
 }
 
 body > header h1 a,
