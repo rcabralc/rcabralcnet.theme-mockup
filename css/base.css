@@ -300,29 +300,24 @@ body > header {
 
 body > header h1 {
   float: left;
-  font: bold 200%/1.125em 'Linux Biolinum O';
+  font: bold 200%/1em 'Linux Biolinum O';
   font-weight: normal;
-  margin: 0.125em 0 0;
+  margin: 0;
 }
 
 body > header h1 a {
   display: inline-block;
-  height: 64px;
-  line-height: 64px;
-}
-
-body > header nav,
-#searchbox {
-  float: right;
 }
 
 body > header nav {
   clear: right;
+  float: right;
   font-family: "Linux Biolinum O";
+  line-height: 2em;
 }
 
-#searchbox {
-  margin-bottom: 0.75em;
+body > header nav {
+  margin-right: -1em;
 }
 
 nav ul {

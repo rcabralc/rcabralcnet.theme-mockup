@@ -11,11 +11,11 @@ html {
 body {
   background-color: rgba(0, 0, 0, 0.75);
   box-shadow: 0 1em 2.5em rgba(0, 0, 0, 0.875);
-  color: #ffffd0;
+  color: #ffffe0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #ffffd0;
+  color: #ffffe0;
   text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.75);
 }
 
@@ -49,7 +49,7 @@ section aside h1 :visited, section aside h2 :visited, section aside h3 :visited,
 @media screen and (min-width: 980px) {
 
   body {
-    margin-top: 6.5em;
+    margin-top: 4.5em;
   }
 
   body > header {
@@ -76,7 +76,7 @@ section aside h1 :visited, section aside h2 :visited, section aside h3 :visited,
     border-bottom: 1px solid rgba(255, 106, 106, 0.1);
     box-shadow: 0 1.5em 3em rgba(0, 0, 0, 0.875);
     content: "";
-    height: 5.5em;
+    height: 3.5em;
     left: 0;
     margin: 0 -1.5em;
     padding: 0 1.5em;
@@ -95,7 +95,7 @@ section aside h1 :visited, section aside h2 :visited, section aside h3 :visited,
 body > header h1 a,
 body > header nav li a {
   border: none;
-  color: #ffffd0;
+  color: #ffffe0;
 }
 
 body > header nav li a:hover {
@@ -114,12 +114,12 @@ body > header nav .selected a:before {
 
 body > header nav a:hover,
 section a:hover {
-  border-bottom: 1px dotted #ffffd0;
+  border-bottom: 1px dotted #ffffe0;
 }
 
 h1 :link, h2 :link, h3 :link, h4 :link, h5 :link, h6 :link,
 h1 :visited, h2 :visited, h3 :visited, h4 :visited, h5 :visited, h6 :visited {
-  color: #ffffd0;
+  color: #ffffe0;
   text-shadow: 0 1em 0.0625em transparent, 0 0 0.25em transparent, 0 0.25em 0.5em rgba(0, 0, 0, 0.75);
 }
 
@@ -258,6 +258,11 @@ body > aside > section > nav li a:hover {
   background-color: rgba(0, 0, 0, 0.125);
 }
 
+#searchbox form {
+  margin-left: -1.1429em; /* 16/14 */
+  margin-right: -1.1429em; /* 16/14 */
+}
+
 body > section > section {
   background-color: rgba(0, 0, 0, 0.25);
   border-top: 1px solid rgba(255, 255, 255, 0.063);
@@ -269,6 +274,110 @@ body > footer {
 }
 
 body > footer nav a {
-  color: #ffffd0;
+  color: #ffffe0;
   border: none;
+}
+
+/* Forms */
+
+fieldset {
+  border: 1px dotted rgba(255, 255, 255, 0.25);
+}
+
+input[type="submit"],
+input[type="button"],
+input[type="text"],
+textarea {
+     -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+input[type="text"],
+textarea {
+  box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.75) inset;
+}
+
+input[type="text"],
+input[type="submit"],
+input[type="button"],
+textarea {
+  background-color: #280000;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+}
+
+input[type="text"]:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+textarea:hover,
+input[type="text"]:focus,
+input[type="submit"]:focus,
+input[type="button"]:focus,
+textarea:focus {
+  background-color: #200;
+  color: white;
+}
+
+input[type="text"]:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+textarea:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+input[type="text"]:focus,
+input[type="submit"]:focus,
+input[type="button"]:focus,
+textarea:focus {
+  border-color: red;
+}
+
+body > aside input[type="text"] {
+  border: 1px solid rgba(64, 64, 64, 0.75);
+  background-color: rgba(240, 240, 240, 0.75);
+  color: #333;
+}
+
+body > aside input[type="text"],
+body > aside textarea {
+  box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.5) inset;
+}
+
+body > aside input[type="text"]:hover,
+body > aside input[type="text"]:focus {
+  background-color: rgba(240, 240, 240, 1);
+  color: #333;
+}
+
+body > aside input[type="text"]:hover {
+  border-color: rgba(64, 64, 64, 1);
+}
+
+body > aside input[type="text"]:focus {
+  border-color: #c00000;
+}
+
+body > aside input[type="submit"],
+body > aside input[type="button"] {
+  background-color: #282828;
+}
+
+body > aside input[type="submit"]:hover,
+body > aside input[type="button"]:hover,
+body > aside input[type="submit"]:focus,
+body > aside input[type="button"]:focus {
+  background-color: #222;
+}
+
+body > aside input[type="submit"],
+body > aside input[type="button"],
+body > aside input[type="submit"]:hover,
+body > aside input[type="button"]:hover,
+body > aside input[type="submit"]:focus,
+body > aside input[type="button"]:focus {
+  border: none;
+}
+
+.required-indicator {
+  color: red;
 }

@@ -8,6 +8,7 @@
   <title>rcabralc.net</title>
 
   <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/forms.css" />
   <link rel="stylesheet" href="css/decoration.css" />
   <link rel="stylesheet" href="css/code.css" />
 
@@ -18,13 +19,6 @@
   <header>
 
     <h1><a href="#">rcabralc.net</a></h1>
-    <div id="searchbox">
-      <form action="#">
-        <div>
-          <input value="Search" type="text" />
-        </div>
-      </form>
-    </div>
 
     <nav>
       <h5 class="invisible">Sections</h5>
@@ -226,6 +220,7 @@ Thinks in a marrow bone.</pre></blockquote>
     </p>
 
     <h6>The deepest subheading</h6>
+
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
       eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -241,11 +236,62 @@ Thinks in a marrow bone.</pre></blockquote>
 
     <section>
       <h1>Comments</h1>
+
+      <form action="#">
+        <fieldset>
+          <legend>Legend</legend>
+          <div class="field">
+            <label for="field1"
+                >Label<span class="required-indicator"
+                  title="Required">&#x25a0;</span></label>
+            <input id="field1" type="text" />
+          </div>
+          <div class="field">
+            <label for="field2">Label</label>
+            <input id="field2" type="text" />
+          </div>
+          <div class="field">
+            <input id="field3" type="checkbox" /><label for="field3">Label</label>
+          </div>
+          <div class="field">
+            <input id="field4" type="radio" /><label for="field4">Label</label>
+            <input id="field5" type="radio" /><label for="field5">Label</label>
+          </div>
+          <div class="field">
+            <label for="field6">Label</label>
+            <select id="field6">
+              <option value="value1">Option</option>
+              <option value="value2">Option</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="field7">Label</label>
+            <textarea id="field7"></textarea>
+          </div>
+          <div class="control">
+            <input type="submit" value="Send" />
+          </div>
+        </fieldset>
+      </form>
+
     </section>
 
   </section>
 
   <aside>
+    <section id="searchbox">
+      <header><label for="searchfield">Search</label></header>
+      <section>
+        <form action="#" method="get" class="single-input">
+          <div>
+            <input type="text" id="searchfield" value="Search" />
+          </div>
+          <div class="search-button">
+            <input type="submit" value="Go" />
+          </div>
+        </form>
+      </section>
+    </section>
     <section>
       <header>Secondary <a href="#">navigation</a></header>
       <nav>
