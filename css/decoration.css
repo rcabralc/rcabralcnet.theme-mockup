@@ -1,21 +1,21 @@
 html {
-  background-image: url(../images/bg.png),     -moz-linear-gradient(bottom,                         transparent,     rgba(0, 0, 0, 0.375));
-  background-image: url(../images/bg.png),      -ms-linear-gradient(bottom,                         transparent,     rgba(0, 0, 0, 0.375));
-  background-image: url(../images/bg.png),       -o-linear-gradient(bottom,                         transparent,     rgba(0, 0, 0, 0.375));
-  background-image: url(../images/bg.png),  -webkit-linear-gradient(bottom,                         transparent,     rgba(0, 0, 0, 0.375));
-  background-image: url(../images/bg.png),          linear-gradient(bottom,                         transparent,     rgba(0, 0, 0, 0.375));
-  background-image: url(../images/bg.png), -webkit-gradient(linear, center bottom, center top, from(transparent), to(rgba(0, 0, 0, 0.375)));
-  background-color: #800000;
+  background-image:     -moz-linear-gradient(top, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)), url(../images/bg.png);
+  background-image:      -ms-linear-gradient(top, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)), url(../images/bg.png);
+  background-image:       -o-linear-gradient(top, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)), url(../images/bg.png);
+  background-image:  -webkit-linear-gradient(top, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)), url(../images/bg.png);
+  background-image:          linear-gradient(top, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)), url(../images/bg.png);
+  background-image: -webkit-gradient(linear, center top, center bottom, from(rgba(0, 0, 0, 0.06)), to(rgba(0, 0, 0, 0.5))), url(../images/bg.png);
+  background-color: #680404;
 }
 
 body {
   background-color: rgba(0, 0, 0, 0.75);
-  box-shadow: 0 1em 2.5em rgba(0, 0, 0, 0.875);
+  box-shadow: 0 1em 5em rgba(0, 0, 0, 0.875);
   color: #ffffe0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #ffffe0;
+  color: #c00000;
   text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.75);
 }
 
@@ -66,7 +66,6 @@ section aside h1 :visited, section aside h2 :visited, section aside h3 :visited,
 
   body > header:before {
     background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
-    background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
     background-image:     -ms-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
     background-image:      -o-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
     background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
@@ -74,7 +73,7 @@ section aside h1 :visited, section aside h2 :visited, section aside h3 :visited,
     background-image: -webkit-gradient(linear, center top, center bottom, from(rgba(0, 0, 0, 0.75)), to(transparent));
     background-color: rgba(16, 0, 0, 0.875);
     border-bottom: 1px solid rgba(255, 106, 106, 0.1);
-    box-shadow: 0 1.5em 3em rgba(0, 0, 0, 0.875);
+    box-shadow: 0 1.5em 3em rgba(0, 0, 0, 0.9);
     content: "";
     height: 3.5em;
     left: 0;
@@ -170,27 +169,20 @@ pre:focus {
 }
 
 body > aside {
-  background-image:    -moz-linear-gradient(bottom, #e0e0e0, #a0a0a0);
-  background-image:     -ms-linear-gradient(bottom, #e0e0e0, #a0a0a0);
-  background-image:      -o-linear-gradient(bottom, #e0e0e0, #a0a0a0);
-  background-image: -webkit-linear-gradient(bottom, #e0e0e0, #a0a0a0);
-  background-image:         linear-gradient(bottom, #e0e0e0, #a0a0a0);
-  background-image: -webkit-gradient(linear, center bottom, center top, from(#e0e0e0), to(#a0a0a0));
-  color: black;
-  text-shadow: 0 1px rgba(255, 255, 255, 0.625);
-}
-
-body > aside header a,
-body > aside header a:hover,
-body > aside header a:visited {
-  color: inherit;
-  border: none;
-  text-shadow: inherit;
+  background-image:    -moz-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/sidebar.png);
+  background-image:     -ms-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/sidebar.png);
+  background-image:      -o-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/sidebar.png);
+  background-image: -webkit-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/sidebar.png);
+  background-image:         linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/sidebar.png);
+  background-image: -webkit-gradient(linear, center top, center bottom, from(rgba(20, 0, 0, 0)), to(rgba(20, 0, 0, 0.5))), url(../images/sidebar.png);
+  box-shadow: 0.5em 0 4em rgba(24, 0, 0, 0.75) inset;
+  color: #24150d;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.15), 0 -1px rgba(0, 0, 0, 0.2);
 }
 
 body > aside > section > section a,
 body > aside footer a {
-  color: #600000;
+  color: #1c0b0b;
   border: none;
   text-shadow: inherit;
 }
@@ -201,26 +193,24 @@ body > aside footer a:visited {
 
 body > aside > section > section a:hover,
 body > aside footer a:hover {
-  color: #c00000;
+  color: #400000;
   border: none;
   text-shadow: inherit;
 }
 
 body > aside > section > header {
-  background-image:    -moz-linear-gradient(top, #222, #111);
-  background-image:     -ms-linear-gradient(top, #222, #111);
-  background-image:      -o-linear-gradient(top, #222, #111);
-  background-image: -webkit-linear-gradient(top, #222, #111);
-  background-image: -webkit-gradient(linear, top, from(#222), to(#111));
-  background-image:         linear-gradient(top, #222, #111);
+  background-image: url(../images/sidebar-box-header-bg.png);
+  box-shadow: 0 0 1.25em rgba(16, 0, 0, 0.5) inset;
+  color: #400a00;
   text-align: center;
 }
 
-body > aside > section > header,
 body > aside > section > header a,
+body > aside > section > header a:hover,
 body > aside > section > header a:visited {
-  color: white;
-  text-shadow: none;
+  color: inherit;
+  border: none;
+  text-shadow: inherit;
 }
 
 body > aside > section > section:nth-child(2n + 1) {
@@ -228,7 +218,8 @@ body > aside > section > section:nth-child(2n + 1) {
 }
 
 body > aside > section > footer {
-  border-top: 1px dotted #666;
+  border-top: 1px dotted;
+  border-color: inherit;
 }
 
 body > footer nav a:hover,
@@ -241,9 +232,9 @@ body > aside > section > nav ul ul {
 
 body > aside > section > nav li a,
 body > aside > section > nav li a:hover {
-  border-color: #666;
+  border-color: inherit;
   color: inherit;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.625);
+  text-shadow: inherit;
      -moz-transition: background-color 0.5s;
   -webkit-transition: background-color 0.5s;
           transition: background-color 0.5s;
@@ -251,7 +242,7 @@ body > aside > section > nav li a:hover {
 
 body > aside > section > nav li.selected > a,
 body > aside > section > nav li.selected > a:hover {
-  color: #600000;
+  color: #400000;
 }
 
 body > aside > section > nav li a:hover {
@@ -293,8 +284,13 @@ textarea {
 }
 
 input[type="text"],
-textarea {
-  box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.75) inset;
+input[type="checkbox"],
+input[type="radio"],
+textarea,
+select {
+  box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.75) inset,
+              0 0 0.5em transparent,
+              0 0 0.25em transparent
 }
 
 input[type="text"],

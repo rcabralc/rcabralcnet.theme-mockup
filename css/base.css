@@ -186,11 +186,6 @@ p {
   word-wrap: break-word;
 }
 
-p:not(.discreet):not(.document-authorship) + p {
-  text-indent: 1.5em;
-  margin-top: 0;
-}
-
 dt {
   font-weight: bold;
 }
@@ -349,13 +344,18 @@ body > header nav li.selected a {
 body > header nav li.selected a:before {
   bottom: 0;
   content: "\2022";
-  font-size: 88.8888%;
+  font-size: 88.8889%;
   left: 0;
   line-height: 0.25em;
   height: 0.5em;
   position: absolute;
   right: 0;
   text-align: center;
+}
+
+body > section p:not(.discreet):not(.document-authorship) + p {
+  text-indent: 1.5em;
+  margin-top: 0;
 }
 
 body > section strong,
@@ -513,7 +513,7 @@ body > aside > section > nav li.selected > a:before {
 .discreet,
 .document-authorship {
   font-family: "Linux Biolinum O";
-  font-size: 88.8888%;
+  font-size: 88.8889%;
 }
 
 p.discreet,
