@@ -14,8 +14,8 @@ legend {
 }
 
 label:after {
-  display: block;
   content: "";
+  display: block;
 }
 
 input,
