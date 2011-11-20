@@ -14,14 +14,9 @@ body {
   color: #ffffe0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #c00000;
-  text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.75);
-}
-
 a {
-  border-bottom: 1px dotted #a06060;
-  color: #c00000;
+  border-bottom: 1px dotted;
+  border-bottom-color: inherit;
      -moz-transition: color 0.5s, border-color 0.5s, text-shadow 0.5s;
   -webkit-transition: color 0.5s, border-color 0.5s, text-shadow 0.5s;
           transition: color 0.5s, border-color 0.5s, text-shadow 0.5s;
@@ -29,21 +24,95 @@ a {
   text-shadow: 0 1em 0.0625em transparent;
 }
 
-a:visited {
-  color: inherit;
-  opacity: 0.75;
-}
-
 a:hover {
   color: inherit;
   text-shadow: 0 0 0.5em red, 0 0 0.25em white;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #c00000;
+  text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.75);
+}
+
+h1 :link, h2 :link, h3 :link, h4 :link, h5 :link, h6 :link,
+h1 :visited, h2 :visited, h3 :visited, h4 :visited, h5 :visited, h6 :visited {
+  color: #ffffe0;
+  text-shadow: 0 1em 0.0625em transparent, 0 0 0.25em transparent, 0 0.25em 0.5em rgba(0, 0, 0, 0.75);
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+  text-shadow: 0 0 0.5em red, 0 0 0.25em white, 0 0.25em 0.5em rgba(0, 0, 0, 0.75);
+}
+
+blockquote {
+  color: #c00000;
+  text-shadow: 0 0 0.5em black;
+}
+
+.verse pre {
+  background: none transparent;
+  border: none;
+  box-shadow: none;
+  color: inherit;
+}
+
+pre,
+blockquote,
+aside {
+  background-image:    -moz-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/paper.png);
+  background-image:     -ms-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/paper.png);
+  background-image:      -o-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/paper.png);
+  background-image: -webkit-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/paper.png);
+  background-image:         linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/paper.png);
+  background-image: -webkit-gradient(linear, center top, center bottom, from(rgba(20, 0, 0, 0)), to(rgba(20, 0, 0, 0.5))), url(../images/paper.png);
+  box-shadow:
+    0     0.5em 1.5em rgba(0,  0, 0, 0.63),
+    0     0     0.5em rgba(32, 0, 0, 0.25) inset,
+    0     0     0.5em rgba(24, 0, 0, 0.5)  inset,
+    0     0     3em   rgba(24, 0, 0, 0.75) inset;
+  color: #250d06;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.15), 0 -1px rgba(0, 0, 0, 0.2);
+}
+
+body > aside {
+  box-shadow:
+    0     0     0.5em rgba(32, 0, 0, 0.25) inset,
+    0     0     0.5em rgba(24, 0, 0, 0.5)  inset,
+    0.5em 0     4em   rgba(24, 0, 0, 0.75) inset;
+}
+
+aside a {
+  color: inherit;
+  text-shadow: inherit;
+}
+
+aside a:hover {
+  border-bottom-color: #600000;
+  color: #600000;
+  text-shadow: inherit;
+}
+
+body > aside > section header,
+body > aside > section header a,
+body > aside > section header a:hover,
+body > aside > section header a:visited,
 section aside h1, section aside h2, section aside h3, section aside h4, section aside h5, section aside h6,
 section aside h1 :link, section aside h2 :link, section aside h3 :link, section aside h4 :link, section aside h5 :link, section aside h6 :link,
 section aside h1 :visited, section aside h2 :visited, section aside h3 :visited, section aside h4 :visited, section aside h5 :visited, section aside h6 :visited {
-  color: red;
-  text-shadow: none;
+  color: #400000;
+  text-shadow: inherit;
+}
+
+.discreet {
+  opacity: 0.5;
+     -moz-transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+          transition: opacity 0.5s;
+}
+
+.discreet:hover,
+.discreet:focus {
+  opacity: 1;
 }
 
 @media screen and (min-width: 980px) {
@@ -111,97 +180,13 @@ body > header nav .selected a:before {
   text-shadow: 0 0 0.5em red, 0 0 0.25em white;
 }
 
-body > header nav a:hover,
-section a:hover {
+body > header nav a:hover {
   border-bottom: 1px dotted #ffffe0;
-}
-
-h1 :link, h2 :link, h3 :link, h4 :link, h5 :link, h6 :link,
-h1 :visited, h2 :visited, h3 :visited, h4 :visited, h5 :visited, h6 :visited {
-  color: #ffffe0;
-  text-shadow: 0 1em 0.0625em transparent, 0 0 0.25em transparent, 0 0.25em 0.5em rgba(0, 0, 0, 0.75);
-}
-
-h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-  text-shadow: 0 0 0.5em red, 0 0 0.25em white, 0 0.25em 0.5em rgba(0, 0, 0, 0.75);
-}
-
-.discreet {
-  opacity: 0.5;
-     -moz-transition: opacity 0.5s;
-  -webkit-transition: opacity 0.5s;
-          transition: opacity 0.5s;
-}
-
-.discreet:hover,
-.discreet:focus {
-  opacity: 1;
-}
-
-blockquote {
-  color: #c00000;
-  text-shadow: 0 0 0.5em black;
-}
-
-section aside,
-pre {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.063);
-  box-shadow: 0 0 1em rgba(0, 0, 0, 0), 0 0 0.5em rgba(0, 0, 0, 0), 0 0.5em 1.5em rgba(0, 0, 0, 0.75);
-     -moz-transition: box-shadow 0.5s;
-  -webkit-transition: box-shadow 0.5s;
-          transition: box-shadow 0.5s;
-  color: #e6e1dc;
-}
-
-section aside:hover,
-pre:hover,
-pre:focus {
-  box-shadow: 0 0 1em red, 0 0 0.5em white, 0 0.5em 1.5em rgba(0, 0, 0, 0.75);
-}
-
-.verse pre {
-  background-color: inherit;
-  border: none;
-  box-shadow: none;
-  color: inherit;
-  opacity: 1;
-}
-
-body > aside {
-  background-image:    -moz-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/sidebar.png);
-  background-image:     -ms-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/sidebar.png);
-  background-image:      -o-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/sidebar.png);
-  background-image: -webkit-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/sidebar.png);
-  background-image:         linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/sidebar.png);
-  background-image: -webkit-gradient(linear, center top, center bottom, from(rgba(20, 0, 0, 0)), to(rgba(20, 0, 0, 0.5))), url(../images/sidebar.png);
-  box-shadow: 0.5em 0 4em rgba(24, 0, 0, 0.75) inset, 0 0 0.5em rgba(24, 0, 0, 0.5) inset;
-  color: #24150d;
-  text-shadow: 0 1px rgba(255, 255, 255, 0.15), 0 -1px rgba(0, 0, 0, 0.2);
-}
-
-body > aside > section > section a,
-body > aside footer a {
-  color: #1c0b0b;
-  border: none;
-  text-shadow: inherit;
-}
-
-body > aside footer a:visited {
-  opacity: 0.75;
-}
-
-body > aside > section > section a:hover,
-body > aside footer a:hover {
-  color: #400000;
-  border: none;
-  text-shadow: inherit;
 }
 
 body > aside > section > header {
   background-image: url(../images/sidebar-box-header-bg.png);
   box-shadow: 0 0 1.25em rgba(16, 0, 0, 0.5) inset;
-  color: #400a00;
   text-align: center;
 }
 
@@ -220,14 +205,6 @@ body > aside > section > section:nth-child(2n + 1) {
 body > aside > section > footer {
   border-top: 1px dotted;
   border-color: inherit;
-}
-
-body > footer nav a:hover,
-body > aside section footer a:hover {
-  border: none;
-}
-
-body > aside > section > nav ul ul {
 }
 
 body > aside > section > nav li a,
@@ -249,9 +226,18 @@ body > aside > section > nav li a:hover {
   background-color: rgba(0, 0, 0, 0.125);
 }
 
-#searchbox form {
-  margin-left: -1.1429em; /* 16/14 */
-  margin-right: -1.1429em; /* 16/14 */
+body > section a {
+  border-bottom-color: #a06060;
+  color: #c00000;
+}
+
+body > section a:visited:after {
+  content: "\2713";
+  font-size: 66.6667%;
+}
+
+body > section a:hover {
+  border-bottom-color: #ffffe0;
 }
 
 body > section > section {
@@ -376,4 +362,9 @@ body > aside input[type="button"]:focus {
 
 .required-indicator {
   color: red;
+}
+
+#searchbox form {
+  margin-left: -1.1429em; /* 16/14 */
+  margin-right: -1.1429em; /* 16/14 */
 }
