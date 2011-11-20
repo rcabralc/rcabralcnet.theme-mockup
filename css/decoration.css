@@ -18,6 +18,7 @@ a {
   border-bottom: 1px dotted;
   border-bottom-color: inherit;
      -moz-transition: color 0.5s, border-color 0.5s, text-shadow 0.5s;
+       -o-transition: color 0.5s, border-color 0.5s, text-shadow 0.5s;
   -webkit-transition: color 0.5s, border-color 0.5s, text-shadow 0.5s;
           transition: color 0.5s, border-color 0.5s, text-shadow 0.5s;
   text-decoration: none;
@@ -106,6 +107,7 @@ section aside h1 :visited, section aside h2 :visited, section aside h3 :visited,
 .discreet {
   opacity: 0.5;
      -moz-transition: opacity 0.5s;
+       -o-transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
           transition: opacity 0.5s;
 }
@@ -213,6 +215,7 @@ body > aside > section > nav li a:hover {
   color: inherit;
   text-shadow: inherit;
      -moz-transition: background-color 0.5s;
+       -o-transition: background-color 0.5s;
   -webkit-transition: background-color 0.5s;
           transition: background-color 0.5s;
 }
@@ -266,7 +269,9 @@ input[type="button"],
 input[type="text"],
 textarea {
      -moz-transition: all 0.5s;
+       -o-transition: all 0.5s;
   -webkit-transition: all 0.5s;
+          transition: all 0.5s;
 }
 
 input[type="text"],
