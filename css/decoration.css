@@ -96,15 +96,24 @@ legend {
     0     0     1em   rgba(24, 0, 0, 0.75) inset;
 }
 
+fieldset a,
+legend a,
+pre a,
+blockquote a,
 aside a {
-  color: inherit;
-  text-shadow: inherit;
+  color: inherit !important;
+  text-shadow: inherit !important;
+  border-bottom-color: inherit !important;
 }
 
+fieldset a:hover,
+legend a:hover,
+pre a:hover,
+blockquote a:hover,
 aside a:hover {
-  border-bottom-color: #600000;
-  color: #600000;
-  text-shadow: inherit;
+  border-bottom-color: #600000 !important;
+  color: #600000 !important;
+  text-shadow: inherit !important;
 }
 
 body > aside > section header,
