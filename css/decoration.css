@@ -57,6 +57,8 @@ blockquote {
   color: inherit;
 }
 
+fieldset,
+legend,
 pre,
 blockquote,
 aside {
@@ -76,10 +78,22 @@ aside {
 }
 
 body > aside {
+  /* Offset in the last shadow, greater blur radius: this makes the column more
+   * darker, specially in the left side. */
   box-shadow:
     0     0     0.5em rgba(32, 0, 0, 0.25) inset,
     0     0     0.5em rgba(24, 0, 0, 0.5)  inset,
     0.5em 0     4em   rgba(24, 0, 0, 0.75) inset;
+}
+
+legend {
+  /* Lighter inset shadow (the last one).  Legends are too small and otherwise
+   * they seem to be too dark. */
+  box-shadow:
+    0     0.5em 1.5em rgba(0,  0, 0, 0.63),
+    0     0     0.5em rgba(32, 0, 0, 0.25) inset,
+    0     0     0.5em rgba(24, 0, 0, 0.5)  inset,
+    0     0     1em   rgba(24, 0, 0, 0.75) inset;
 }
 
 aside a {
@@ -265,11 +279,13 @@ body > footer nav a {
 /* Forms */
 
 fieldset {
-  border: 1px dotted rgba(255, 255, 255, 0.25);
+  border: none;
 }
 
-input[type="submit"],
-input[type="button"],
+legend {
+  padding: 0 1em;
+}
+
 input[type="text"],
 textarea {
      -moz-transition: all 0.5s;
@@ -279,98 +295,25 @@ textarea {
 }
 
 input[type="text"],
-input[type="checkbox"],
-input[type="radio"],
-textarea,
-select {
-  box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.75) inset,
-              0 0 0.5em transparent,
-              0 0 0.25em transparent
-}
-
-input[type="text"],
-input[type="submit"],
-input[type="button"],
 textarea {
-  background-color: #280000;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid #604000;
+  box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.75) inset;
 }
 
 input[type="text"]:hover,
-input[type="submit"]:hover,
-input[type="button"]:hover,
-textarea:hover,
-input[type="text"]:focus,
-input[type="submit"]:focus,
-input[type="button"]:focus,
-textarea:focus {
-  background-color: #200;
-  color: white;
-}
-
-input[type="text"]:hover,
-input[type="submit"]:hover,
-input[type="button"]:hover,
 textarea:hover {
-  border-color: rgba(255, 255, 255, 0.5);
+  background-color: white;
 }
 
 input[type="text"]:focus,
-input[type="submit"]:focus,
-input[type="button"]:focus,
 textarea:focus {
-  border-color: red;
-}
-
-body > aside input[type="text"] {
-  border: 1px solid rgba(64, 64, 64, 0.75);
-  background-color: rgba(240, 240, 240, 0.75);
-  color: #333;
-}
-
-body > aside input[type="text"],
-body > aside textarea {
-  box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.5) inset;
-}
-
-body > aside input[type="text"]:hover,
-body > aside input[type="text"]:focus {
-  background-color: rgba(240, 240, 240, 1);
-  color: #333;
-}
-
-body > aside input[type="text"]:hover {
-  border-color: rgba(64, 64, 64, 1);
-}
-
-body > aside input[type="text"]:focus {
-  border-color: #c00000;
-}
-
-body > aside input[type="submit"],
-body > aside input[type="button"] {
-  background-color: #282828;
-}
-
-body > aside input[type="submit"]:hover,
-body > aside input[type="button"]:hover,
-body > aside input[type="submit"]:focus,
-body > aside input[type="button"]:focus {
-  background-color: #222;
-}
-
-body > aside input[type="submit"],
-body > aside input[type="button"],
-body > aside input[type="submit"]:hover,
-body > aside input[type="button"]:hover,
-body > aside input[type="submit"]:focus,
-body > aside input[type="button"]:focus {
-  border: none;
+  border: 1px solid #c00000;
+  background-color: white;
 }
 
 .required-indicator {
-  color: red;
+  color: #c00000;
 }
 
 #searchbox form {
