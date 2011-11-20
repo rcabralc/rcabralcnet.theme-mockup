@@ -234,6 +234,10 @@ body > section a {
   color: #c00000;
 }
 
+body > section a:visited {
+  border-bottom-color: #400000;
+}
+
 body > section a:visited:after {
   content: "\2713";
   font-size: 66.6667%;
