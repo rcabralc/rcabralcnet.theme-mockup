@@ -209,6 +209,7 @@ body > aside > section > header {
   background-color: rgba(0, 0, 0, 0.25);
   background-image: url(../images/sidebar-box-header-bg.png);
   box-shadow: 0 0 1.25em rgba(16, 0, 0, 0.5) inset;
+  margin-bottom: 1px;
   text-align: center;
 }
 
@@ -248,7 +249,7 @@ body > aside > section > nav li.selected > a:hover {
 }
 
 body > aside > section > nav li a:hover {
-  background-color: rgba(0, 0, 0, 0.125);
+  background-color: rgba(0, 0, 0, 0.38);
 }
 
 body > section a {
