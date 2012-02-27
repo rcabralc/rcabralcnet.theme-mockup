@@ -493,13 +493,14 @@ body > aside > section > nav li {
 
 body > aside > section > nav li a {
   display: block;
-  padding: 0.25em 0.5em;
+  padding: 0.5em 0.5em 0.5em 1em;
 }
 
 body > aside > section > nav li.selected > a:before {
   content: "\2022";
   display: inline-block;
-  margin-left: -0.5em;
+  margin-left: -0.75em;
+  margin-right: 0.25em;
   text-align: center;
   width: 0.5em;
 }
