@@ -29,19 +29,23 @@ a:hover {
   text-shadow: 0 0 0.5em red, 0 0 0.25em white;
 }
 
+body > section a {
+  color: white;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  color: #c00000;
-  text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.75);
+  // color: #c00000;
+  // text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.75);
 }
 
 h1 :link, h2 :link, h3 :link, h4 :link, h5 :link, h6 :link,
 h1 :visited, h2 :visited, h3 :visited, h4 :visited, h5 :visited, h6 :visited {
-  color: #e0cfcf;
+  // color: #e0cfcf;
   text-shadow: 0 1em 0.0625em transparent, 0 0 0.25em transparent, 0 0.25em 0.5em rgba(0, 0, 0, 0.75);
 }
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-  color: #e0cfcf !important;
+  // color: #e0cfcf !important;
   text-shadow: 0 0 0.5em red, 0 0 0.25em white, 0 0.25em 0.5em rgba(0, 0, 0, 0.75);
 }
 

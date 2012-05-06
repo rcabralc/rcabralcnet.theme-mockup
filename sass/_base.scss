@@ -24,14 +24,17 @@
 }
 
 html {
+  font-family: "Gentium", "Droid Serif", serif;
+  font-size: 18px;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  line-height: 1.5;
   min-height: 100%;
 }
 
 body {
   box-sizing: border-box;
-  font-family: "Gentium", "Droid Serif", serif;
-  font-size: 18px;
-  line-height: 1.5em;
   margin: 0 auto 2em;
   max-width: 980px;
 }
@@ -60,15 +63,20 @@ h6 {
   font-size: 88.8889%;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Linux Biolinum O", "Droid Sans", sans-serif;
+  font-weight: normal;
+  line-height: 1.125em;
+  margin: 1em 0 0.6667em;
+}
+
+h1, h2 {
   letter-spacing: -0.05em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Linux Biolinum Capitals O", "Droid Sans", sans-serif;
-  /* font-variant: small-caps; */
-  line-height: 1.125em;
-  margin: 1em 0 0.6667em;
+h3, h4, h5, h6 {
+  font-family: "Linux Biolinum Capitals", sans-serif;
+  text-transform: lowercase;
 }
 
 p {
@@ -450,9 +458,16 @@ body > aside > section > nav li.selected > a:before {
   font-size: 88.8889%;
 }
 
-p.discreet,
-p.document-authorship {
+p.discreet {
   margin: 0.6667em 0 1em !important;
+  text-indent: 0 !important;
+}
+
+p.document-authorship {
+  @include adjust-font-size-to(14px);
+  font-style: italic;
+  margin: 0 0 1em !important;
+  text-align: right;
   text-indent: 0 !important;
 }
 
