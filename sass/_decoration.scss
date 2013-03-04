@@ -1,57 +1,45 @@
 html {
-  background-image:     -moz-linear-gradient(top, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5)), url(../images/bg.png);
-  background-image:      -ms-linear-gradient(top, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5)), url(../images/bg.png);
-  background-image:       -o-linear-gradient(top, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5)), url(../images/bg.png);
-  background-image:  -webkit-linear-gradient(top, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5)), url(../images/bg.png);
-  background-image:          linear-gradient(top, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5)), url(../images/bg.png);
-  background-image: -webkit-gradient(linear, center top, center bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 0.5))), url(../images/bg.png);
+  @include background(
+    linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)),
+    url(../images/bg.png)
+  );
+
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0.75);
-  box-shadow: 0 1em 5em rgba(0, 0, 0, 0.875);
-  color: #e0cfcf;
+  #content,
+  > aside {
+    color: $body-text-color;
+    text-shadow: 0 1px lighten(#180000, 10%), 0 -1px rgba(0, 0, 0, 0.63);
+  }
 }
 
 a {
   border-bottom: 1px dotted;
   border-bottom-color: inherit;
-     -moz-transition: background-color 0.5s, color 0.5s, border-color 0.5s, text-shadow 0.5s;
-       -o-transition: background-color 0.5s, color 0.5s, border-color 0.5s, text-shadow 0.5s;
-  -webkit-transition: background-color 0.5s, color 0.5s, border-color 0.5s, text-shadow 0.5s;
-          transition: background-color 0.5s, color 0.5s, border-color 0.5s, text-shadow 0.5s;
-  color: inherit;
+  color: $default-link-color;
+  @include transition(
+    background-color 0.25s,
+    color 0.25s,
+    border-color 0.25s,
+    text-shadow 0.25s
+  );
   text-decoration: none;
-  text-shadow: 0 1em 0.0625em transparent;
+}
+
+a:visited {
+  color: $visited-link-color;
 }
 
 a:hover {
-  text-shadow: 0 0 0.5em red, 0 0 0.25em white;
-}
-
-body > section a {
-  color: white;
+  color: $hover-link-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  // color: #c00000;
-  // text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.75);
-}
-
-h1 :link, h2 :link, h3 :link, h4 :link, h5 :link, h6 :link,
-h1 :visited, h2 :visited, h3 :visited, h4 :visited, h5 :visited, h6 :visited {
-  // color: #e0cfcf;
-  text-shadow: 0 1em 0.0625em transparent, 0 0 0.25em transparent, 0 0.25em 0.5em rgba(0, 0, 0, 0.75);
-}
-
-h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-  // color: #e0cfcf !important;
-  text-shadow: 0 0 0.5em red, 0 0 0.25em white, 0 0.25em 0.5em rgba(0, 0, 0, 0.75);
+  color: $heading-color;
 }
 
 blockquote {
-  color: #c00000;
-  text-shadow: 0 0 0.5em black;
 }
 
 .verse pre {
@@ -61,55 +49,7 @@ blockquote {
   color: inherit;
 }
 
-fieldset,
-legend,
-pre,
-blockquote,
-aside {
-  background-image:    -moz-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/sidebar.png);
-  background-image:     -ms-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/sidebar.png);
-  background-image:      -o-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/sidebar.png);
-  background-image: -webkit-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/sidebar.png);
-  background-image:         linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/sidebar.png);
-  background-image: -webkit-gradient(linear, center top, center bottom, from(rgba(20, 0, 0, 0)), to(rgba(20, 0, 0, 0.5))), url(../images/sidebar.png);
-  box-shadow:
-    0     0.5em 1.5em rgba(0,  0, 0, 0.63),
-    0     0     0.5em rgba(32, 0, 0, 0.25) inset,
-    0     0     0.5em rgba(24, 0, 0, 0.5)  inset,
-    0     0     3em   rgba(24, 0, 0, 0.75) inset;
-  color: #ae6854;
-  text-shadow: 0 1px rgba(255, 255, 255, 0.13), 0 -1px rgba(0, 0, 0, 0.63);
-}
-
-fieldset a,
-legend a,
-pre a,
-blockquote a,
-aside a {
-  text-shadow: inherit !important;
-}
-
-fieldset a:hover,
-legend a:hover,
-pre a:hover,
-blockquote a:hover,
-aside a:hover {
-  color: #e0cfcf !important;
-  text-shadow: inherit !important;
-}
-
-body > aside {
-  /* Offset in the last shadow, greater blur radius: this makes the column more
-   * darker, specially in the left side. */
-  box-shadow:
-    0     0     0.5em rgba(32, 0, 0, 0.25) inset,
-    0     0     0.5em rgba(24, 0, 0, 0.5)  inset,
-    0.5em 0     4em   rgba(24, 0, 0, 0.75) inset;
-}
-
 legend {
-  /* Lighter inset shadow (the last one).  Legends are too small and otherwise
-   * they seem to be too dark. */
   box-shadow:
     0     0.5em 1.5em rgba(0,  0, 0, 0.63),
     0     0     0.5em rgba(32, 0, 0, 0.25) inset,
@@ -117,22 +57,33 @@ legend {
     0     0     1em   rgba(24, 0, 0, 0.75) inset;
 }
 
-body > aside > section header,
-body > aside > section header a,
-body > aside > section header a:hover,
-body > aside > section header a:visited,
-section aside h1, section aside h2, section aside h3, section aside h4, section aside h5, section aside h6,
-section aside h1 :link, section aside h2 :link, section aside h3 :link, section aside h4 :link, section aside h5 :link, section aside h6 :link,
-section aside h1 :visited, section aside h2 :visited, section aside h3 :visited, section aside h4 :visited, section aside h5 :visited, section aside h6 :visited {
-  color: #C00000;
+section aside h1,
+section aside h2,
+section aside h3,
+section aside h4,
+section aside h5,
+section aside h6,
+section aside h1 :link,
+section aside h2 :link,
+section aside h3 :link,
+section aside h4 :link,
+section aside h5 :link,
+section aside h6 :link,
+section aside h1 :visited,
+section aside h2 :visited,
+section aside h3 :visited,
+section aside h4 :visited,
+section aside h5 :visited,
+section aside h6 :visited {
+  color: white;
 }
 
 .discreet {
-  opacity: 0.5;
-     -moz-transition: opacity 0.5s;
-       -o-transition: opacity 0.5s;
-  -webkit-transition: opacity 0.5s;
-          transition: opacity 0.5s;
+  opacity: 0.63;
+     -moz-transition: opacity 0.25s;
+       -o-transition: opacity 0.25s;
+  -webkit-transition: opacity 0.25s;
+          transition: opacity 0.25s;
 }
 
 .discreet:hover,
@@ -185,31 +136,32 @@ section aside h1 :visited, section aside h2 :visited, section aside h3 :visited,
 
 }
 
-body > header h1 a,
-body > header nav li a {
-  border: none;
-  color: #e0cfcf;
+body > header {
+  $link-glow: 0 0 0.5em red, 0 0 0.25em white;
+
+  a {
+    border: none;
+    color: white;
+    text-shadow: 0 1em 0.5em transparent;
+
+    &:hover {
+      color: white;
+      text-shadow: $link-glow;
+    }
+
+    &:hover, &:visited {
+      border: none;
+    }
+  }
+
+  nav .selected {
+    a:before {
+      text-shadow: $link-glow;
+    }
+  }
 }
 
-body > header nav li a:hover {
-  border: none;
-}
-
-body > header nav .selected a,
-body > header nav .selected a:hover,
-body > header nav .selected a:visited {
-  border-color: transparent;
-}
-
-body > header nav .selected a:before {
-  text-shadow: 0 0 0.5em red, 0 0 0.25em white;
-}
-
-body > header nav a:hover {
-  border-bottom: 1px dotted #e0cfcf;
-}
-
-body > aside > section > header {
+#sidebar > section > header {
   background-color: rgba(0, 0, 0, 0.25);
   background-image: url(../images/sidebar-box-header-bg.png);
   box-shadow: 0 0 1.25em rgba(16, 0, 0, 0.5) inset;
@@ -217,65 +169,43 @@ body > aside > section > header {
   text-align: center;
 }
 
-body > aside > section > header a,
-body > aside > section > header a:hover,
-body > aside > section > header a:visited {
-  color: inherit;
-  border: none;
-  text-shadow: inherit;
-}
-
-body > aside > section > section:nth-child(2n + 1) {
+#sidebar > section > section:nth-child(2n + 1) {
   background-color: rgba(0, 0, 0, 0.125);
 }
 
-body > aside > section > footer {
+#sidebar > section > footer {
   border-top: 1px dotted;
 }
 
-body > aside > section > footer,
-body > aside > section > nav li a,
-body > aside > section > nav li a:hover {
+#sidebar > section > footer {
   border-color: #400000;
   color: inherit;
   text-shadow: inherit;
 }
 
-body > aside > section > footer a {
-  /* Same as the text color, but can't inherit because footer has a different
-   * border color */
-  border-color: #ae6854;
+#sidebar > section > nav li a,
+#sidebar > section > nav li a:hover {
+  border-color: #400000;
 }
 
-body > aside > section > nav li.selected > a,
-body > aside > section > nav li.selected > a:hover {
-  color: #e0cfcf;
-}
-
-body > aside > section > nav li a:hover {
+#sidebar > section > nav li a:hover {
   background-color: rgba(0, 0, 0, 0.38);
 }
 
-body > section a {
-  color: white;
+#content a {
   border-bottom-color: #a06060;
 }
 
-body > section a:visited {
-  color: #9f8080;
-}
-
-body > section a:visited:after {
+#content a:visited:after {
   content: "\2713";
   font-size: 66.6667%;
 }
 
-body > section a:hover {
-  border-bottom-color: #e0cfcf;
-  color: inherit;
+#content a:hover {
+  border-bottom-color: $body-text-color;
 }
 
-body > section > section {
+#content > section {
   background-color: rgba(0, 0, 0, 0.25);
   border-top: 1px solid rgba(255, 255, 255, 0.063);
 }
@@ -286,7 +216,7 @@ body > footer {
 }
 
 body > footer nav a {
-  color: #e0cfcf;
+  color: $body-text-color;
   border: none;
 }
 
@@ -302,10 +232,10 @@ legend {
 
 input[type="text"],
 textarea {
-     -moz-transition: all 0.5s;
-       -o-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-          transition: all 0.5s;
+     -moz-transition: all 0.25s;
+       -o-transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+          transition: all 0.25s;
 }
 
 input[type="text"],
@@ -314,7 +244,7 @@ textarea {
   border: none;
   border-radius: 5px;
   box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.75) inset;
-  color: #e0cfcf;
+  color: $body-text-color;
 }
 
 input[type="text"]:hover,

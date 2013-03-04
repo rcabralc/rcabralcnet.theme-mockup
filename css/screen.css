@@ -1,46 +1,20 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,300,300italic);
 /*
   Welcome to Compass.
   In this file you should write your main styles. (or centralize your imports)
   Import this file using the following HTML or equivalent:
   <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 */
-@font-face {
-  font-family: 'Gentium Basic';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Gentium Basic"), local("GentiumBasic"), url("../fonts/GenBasR.ttf");
-}
-
-@font-face {
-  font-family: 'Gentium Basic';
-  font-style: italic;
-  font-weight: normal;
-  src: local("Gentium Basic Italic"), local("GentiumBasic-Italic"), url("../fonts/GenBasI.ttf");
-}
-
-@font-face {
-  font-family: 'Gentium Basic';
-  font-style: normal;
-  font-weight: bold;
-  src: local("Gentium Basic Bold"), local("GentiumBasic-Bold"), url("../fonts/GenBasB.ttf");
-}
-
-@font-face {
-  font-family: 'Gentium Basic';
-  font-style: italic;
-  font-weight: bold;
-  src: local("Gentium Basic Bold Italic"), local("GentiumBasic-BoldItalic"), url("../fonts/GenBasBI.ttf");
-}
-
-/* line 26, ../sass/_base.scss */
+/* line 25, ../sass/_base.scss */
 html {
-  font-family: "Gentium", "Droid Serif", serif;
-  font-size: 18px;
+  font-family: "Lato", "Droid Sans", sans-serif;
+  font-size: 16px;
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
   line-height: 1.5;
   min-height: 100%;
+  text-rendering: optimizeLegibility;
 }
 
 /* line 36, ../sass/_base.scss */
@@ -51,162 +25,177 @@ body {
 }
 
 /* line 42, ../sass/_base.scss */
-h1 {
-  font-size: 183.3333%;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", "Droid Sans", sans-serif;
 }
 
 /* line 46, ../sass/_base.scss */
-h2 {
-  font-size: 150%;
+h1, h2, h3, h4 {
+  font-weight: 300;
 }
 
 /* line 50, ../sass/_base.scss */
-h3 {
-  font-size: 133.3333%;
+h5, h6 {
+  font-weight: normal;
 }
 
 /* line 54, ../sass/_base.scss */
+h1 {
+  font-size: 2.25em;
+  line-height: 1.111em;
+  margin-bottom: 0.889em;
+  text-align: center;
+}
+
+/* line 63, ../sass/_base.scss */
+h2 {
+  font-size: 1.688em;
+  line-height: 1.778em;
+  margin-top: 1.333em;
+  margin-bottom: 0.444em;
+}
+
+/* line 69, ../sass/_base.scss */
+h3 {
+  font-size: 1.5em;
+  line-height: 1em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+/* line 75, ../sass/_base.scss */
 h4 {
-  font-size: 116.6667%;
+  font-size: 1.313em;
+  line-height: 2.286em;
+  margin-top: 1.714em;
+  margin-bottom: 0.571em;
 }
 
-/* line 58, ../sass/_base.scss */
+/* line 81, ../sass/_base.scss */
 h5 {
-  font-size: 100%;
+  font-size: 1.125em;
+  line-height: 1.333em;
+  margin-top: 2em;
+  margin-bottom: 0.667em;
 }
 
-/* line 62, ../sass/_base.scss */
+/* line 87, ../sass/_base.scss */
 h6 {
-  font-size: 88.8889%;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 2.25em;
+  margin-bottom: 0.75em;
 }
 
-/* line 66, ../sass/_base.scss */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Linux Biolinum O", "Droid Sans", sans-serif;
-  font-weight: normal;
-  line-height: 1.125em;
-  margin: 1em 0 0.6667em;
-}
-
-/* line 73, ../sass/_base.scss */
-h1, h2 {
-  letter-spacing: -0.05em;
-}
-
-/* line 77, ../sass/_base.scss */
-h3, h4, h5, h6 {
-  font-family: "Linux Biolinum Capitals", sans-serif;
-  text-transform: lowercase;
-}
-
-/* line 82, ../sass/_base.scss */
+/* line 93, ../sass/_base.scss */
 p {
-  margin: 0.6667em 0 0;
+  margin: 0;
   word-spacing: 0.05em;
   word-wrap: break-word;
 }
 
-/* line 88, ../sass/_base.scss */
-dt {
-  font-weight: bold;
-}
-
-/* line 93, ../sass/_base.scss */
+/* line 100, ../sass/_base.scss */
 ol,
 ul {
-  padding-left: 2.25em;
-  margin: 1em 0;
+  list-style-position: outside;
+  padding-left: 0;
+  margin: 1.5em 0;
 }
-
-/* line 101, ../sass/_base.scss */
-ul ol,
-ol ul,
+/* line 106, ../sass/_base.scss */
 ol ol,
+ol ul,
+ul ol,
 ul ul {
   margin-top: 0;
   margin-bottom: 0;
+  padding-left: 2.25em;
 }
 
-/* line 107, ../sass/_base.scss */
-ul,
-ol {
-  list-style-position: outside;
+/* line 114, ../sass/_base.scss */
+dl {
+  margin: 1.5em 0;
+}
+/* line 117, ../sass/_base.scss */
+dl dt {
+  font-style: italic;
+  font-weight: bold;
 }
 
-/* line 111, ../sass/_base.scss */
-abbr, acronym {
+/* line 123, ../sass/_base.scss */
+abbr {
   font-variant: small-caps;
   letter-spacing: 0.05em;
   text-transform: lowercase;
 }
 
-/* line 118, ../sass/_base.scss */
+/* line 130, ../sass/_base.scss */
 code,
 pre {
-  font-family: "Ubuntu Mono","DejaVu Sans Mono","Inconsolata","Consolas",monospace;
+  font-family: "Oxygen Mono", "Inconsolata", "Consolas", monospace;
 }
 
-/* line 122, ../sass/_base.scss */
+/* line 134, ../sass/_base.scss */
 code {
-  font-size: 88.8889%;
-}
-
-/* line 126, ../sass/_base.scss */
-pre > code {
-  font-size: 100%;
-}
-
-/* line 130, ../sass/_base.scss */
-pre {
-  font-size: 77.7778%;
-  line-height: 20px;
-  margin: 1.5em;
-  overflow: auto;
-  padding: 1em;
+  font-size: 0.875em;
+  line-height: 1.714em;
 }
 
 /* line 138, ../sass/_base.scss */
+pre > code {
+  font-size: 10px;
+}
+
+/* line 142, ../sass/_base.scss */
+pre {
+  font-size: 0.875em;
+  line-height: 1.714em;
+  margin: 1.714em 2.5em;
+  overflow: auto;
+  padding: 0.857em;
+}
+
+/* line 149, ../sass/_base.scss */
 blockquote {
   font-style: italic;
   margin: 1.5em;
-  padding: 1em 2em;
+  padding: 0.75em 2em;
   position: relative;
 }
 
-/* line 145, ../sass/_base.scss */
+/* line 156, ../sass/_base.scss */
 blockquote:before {
   /* Left quote margin */
   margin-right: -2em;
 }
 
-/* line 150, ../sass/_base.scss */
+/* line 161, ../sass/_base.scss */
 blockquote em {
   font-style: normal;
 }
 
-/* line 154, ../sass/_base.scss */
+/* line 165, ../sass/_base.scss */
 blockquote:before {
   content: "\201c";
   position: absolute;
   right: 100%;
 }
 
-/* line 160, ../sass/_base.scss */
+/* line 171, ../sass/_base.scss */
 blockquote:after {
   content: "\201d";
 }
 
-/* line 164, ../sass/_base.scss */
+/* line 175, ../sass/_base.scss */
 blockquote q:before {
   content: "\2018";
 }
 
-/* line 168, ../sass/_base.scss */
+/* line 179, ../sass/_base.scss */
 blockquote q:after {
   content: "\2019";
 }
 
-/* line 172, ../sass/_base.scss */
+/* line 183, ../sass/_base.scss */
 blockquote.verse {
   overflow: auto;
   padding-left: 0;
@@ -214,95 +203,97 @@ blockquote.verse {
   position: static;
 }
 
-/* line 179, ../sass/_base.scss */
+/* line 190, ../sass/_base.scss */
 blockquote.verse:before {
   content: "";
 }
 
-/* line 183, ../sass/_base.scss */
+/* line 194, ../sass/_base.scss */
 blockquote.verse:after {
   content: "";
 }
 
-/* line 187, ../sass/_base.scss */
+/* line 198, ../sass/_base.scss */
 .verse pre {
   display: table;
   font-family: inherit;
   font-size: inherit;
+  line-height: 1.5em;
   margin: 0 auto;
   padding: 0;
   width: auto;
 }
 
-/* line 196, ../sass/_base.scss */
+/* line 208, ../sass/_base.scss */
 dd {
   margin-left: 2.25em;
 }
 
-/* line 200, ../sass/_base.scss */
+/* line 212, ../sass/_base.scss */
 body > header {
   padding: 0.75em 1.5em;
 }
 
-/* line 204, ../sass/_base.scss */
+/* line 216, ../sass/_base.scss */
 body > header h1 {
   float: left;
-  font: bold 200%/1em "Linux Biolinum O", "Droid Sans", sans-serif;
+  font-size: 200%;
+  font-weight: bold;
+  line-height: 1;
   font-weight: normal;
   margin: 0;
 }
 
-/* line 211, ../sass/_base.scss */
+/* line 225, ../sass/_base.scss */
 body > header h1 a {
   display: inline-block;
 }
 
-/* line 215, ../sass/_base.scss */
+/* line 229, ../sass/_base.scss */
 body > header nav {
   clear: right;
   float: right;
-  font-family: "Linux Biolinum O", "Droid Sans", sans-serif;
   line-height: 2em;
 }
 
-/* line 222, ../sass/_base.scss */
+/* line 235, ../sass/_base.scss */
 body > header nav {
   margin-right: -1em;
 }
 
-/* line 226, ../sass/_base.scss */
+/* line 239, ../sass/_base.scss */
 nav ul {
   margin: 0;
 }
 
-/* line 230, ../sass/_base.scss */
+/* line 243, ../sass/_base.scss */
 nav li {
   display: inline-block;
 }
 
-/* line 234, ../sass/_base.scss */
+/* line 247, ../sass/_base.scss */
 nav li a {
   padding: 0 1em;
 }
 
-/* line 238, ../sass/_base.scss */
+/* line 251, ../sass/_base.scss */
 body > header nav li {
   margin-left: 0.5em;
 }
 
-/* line 242, ../sass/_base.scss */
+/* line 255, ../sass/_base.scss */
 body > header nav li a {
   display: inline-block;
   height: 1.75em;
   line-height: 1.5em;
 }
 
-/* line 248, ../sass/_base.scss */
+/* line 261, ../sass/_base.scss */
 body > header nav li.selected a {
   position: relative;
 }
 
-/* line 252, ../sass/_base.scss */
+/* line 265, ../sass/_base.scss */
 body > header nav li.selected a:before {
   bottom: 0;
   content: "\2022";
@@ -315,18 +306,35 @@ body > header nav li.selected a:before {
   text-align: center;
 }
 
-/* line 264, ../sass/_base.scss */
-body > section {
+/* line 277, ../sass/_base.scss */
+#content {
+  clear: both;
   display: table-cell;
   font-size: 100%;
   /* 18px; */
+  padding: 1.5em 2.5em;
   vertical-align: top;
+}
+/* line 14, ../sass/_base.scss */
+#content .quantity {
+  font-style: normal !important;
+  font-weight: normal !important;
+  white-space: nowrap;
+}
+/* line 20, ../sass/_base.scss */
+#content p.discreet {
+  font-size: 0.875em;
+  line-height: 1.714em;
+  cursor: default;
+  font-family: "Lato", "Droid Sans", sans-serif;
+  margin-bottom: 1.5em;
+  text-indent: 0 !important;
 }
 
 /* Couldn't find a better way to prevent few-contented pages to not shrink due
 * to display: table-cell... */
-/* line 272, ../sass/_base.scss */
-body > section:before {
+/* line 289, ../sass/_base.scss */
+#content:before {
   content: "a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a";
   display: block;
   height: 0;
@@ -334,79 +342,77 @@ body > section:before {
   visibility: hidden;
 }
 
-/* line 280, ../sass/_base.scss */
-body > section + aside {
+/* line 297, ../sass/_base.scss */
+#content + aside {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   display: table-cell;
+  font-size: 16px;
+  line-height: 1.5em;
+  padding: 2.5em 0;
   vertical-align: top;
   width: 26%;
 }
 
-/* line 286, ../sass/_base.scss */
-body > section p:not(.discreet):not(.document-authorship) + p {
+/* line 311, ../sass/_base.scss */
+#content p:not(.discreet):not(.document-authorship) + p,
+#content ul + p,
+#content ol + p,
+#content aside + p {
   text-indent: 1.5em;
-  margin-top: 0;
 }
 
-/* line 294, ../sass/_base.scss */
-body > section strong,
-body > section strong em,
-body > section em strong,
-body > section dt {
-  font-family: "Gentium Basic", "Droid Serif", serif;
+/* line 317, ../sass/_base.scss */
+#content aside,
+#content aside strong,
+#content aside em {
+  font-family: "Lato", "Droid Sans", sans-serif;
 }
 
-/* line 301, ../sass/_base.scss */
-body > aside,
-body > section aside,
-body > section aside strong,
-body > section aside em {
-  font-family: "Linux Biolinum O", "Droid Sans", sans-serif;
-}
-
-/* line 305, ../sass/_base.scss */
+/* line 321, ../sass/_base.scss */
 section > section h1 {
   font-size: 137.5%;
 }
 
-/* line 309, ../sass/_base.scss */
+/* line 325, ../sass/_base.scss */
 section > section h2 {
   font-size: 125%;
 }
 
-/* line 313, ../sass/_base.scss */
+/* line 329, ../sass/_base.scss */
 section > section h3 {
   font-size: 112.5%;
 }
 
-/* line 317, ../sass/_base.scss */
+/* line 333, ../sass/_base.scss */
 section > section h4 {
   font-size: 100%;
 }
 
-/* line 321, ../sass/_base.scss */
+/* line 337, ../sass/_base.scss */
 section > section h5 {
   font-size: 87.5%;
 }
 
-/* line 325, ../sass/_base.scss */
+/* line 341, ../sass/_base.scss */
 section > section h6 {
   font-size: 75%;
 }
 
-/* line 329, ../sass/_base.scss */
+/* line 345, ../sass/_base.scss */
 section aside {
+  font-size: 1.125em;
+  line-height: 1.333em;
   float: right;
-  font-size: 88.8889%;
-  /* 16px */
-  margin-left: 1.75em;
-  margin-bottom: 1.75em;
+  margin-left: 1.333em;
+  margin-bottom: 1.333em;
   margin-right: 0;
-  margin-top: 0.75em;
-  padding: 1em;
+  margin-top: 0;
+  padding: 0.667em;
   width: 33%;
 }
 
-/* line 345, ../sass/_base.scss */
+/* line 361, ../sass/_base.scss */
 section aside h1:first-child,
 section aside h2:first-child,
 section aside h3:first-child,
@@ -416,116 +422,89 @@ section aside h6:first-child {
   margin-top: 0;
 }
 
-/* line 349, ../sass/_base.scss */
-body > section {
-  clear: both;
-  padding: 1.5em;
-}
-
-/* line 354, ../sass/_base.scss */
-body > section + aside {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 16px;
-  line-height: 1.5em;
-  padding: 2.5em 0;
-}
-
-/* line 364, ../sass/_base.scss */
-body > section .document-authorship + p:not(.discreet):first-line,
-body > section .document-authorship + .discreet + p:first-line,
-body > section h1 + p:not(.document-description):first-line {
-  font-size: 111.1111%;
+/* line 367, ../sass/_base.scss */
+#content .document-description + p:not(.discreet)::first-line,
+#content .document-description + .discreet + p::first-line,
+#content h1 + p:not(.document-authorship):not(.document-description)::first-line {
+  font-size: 1.25em;
+  line-height: 1.2em;
   font-variant: small-caps;
-  letter-spacing: 0.05em;
-}
-
-/* line 370, ../sass/_base.scss */
-body > section > h1:nth-of-type(1) {
-  margin-top: 0;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
 }
 
 /* line 374, ../sass/_base.scss */
-body > section > section {
-  margin: 1em -1.5em -1.5em;
+#content > h1:nth-of-type(1) {
+  margin-top: 0;
+}
+
+/* line 378, ../sass/_base.scss */
+#content > section {
+  margin: 1em -2.5em -1.5em;
   padding: 0 1.5em 1px;
 }
 
-/* line 379, ../sass/_base.scss */
+/* line 384, ../sass/_base.scss */
 body > footer {
-  font-family: "Linux Biolinum O", "Droid Sans", sans-serif;
-  font-size: 77.7778%;
+  font-size: 0.75em;
+  line-height: 2em;
+  font-family: "Lato","Linux Biolinum O", "Droid Sans", sans-serif;
   padding-bottom: 1.5em;
   padding-top: 0.5em;
 }
-
-/* line 386, ../sass/_base.scss */
+/* line 391, ../sass/_base.scss */
 body > footer p {
   margin: 0.5em 0;
   text-align: center;
 }
-
-/* line 391, ../sass/_base.scss */
+/* line 396, ../sass/_base.scss */
 body > footer nav {
   text-align: center;
 }
-
-/* line 395, ../sass/_base.scss */
+/* line 398, ../sass/_base.scss */
 body > footer nav ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 400, ../sass/_base.scss */
-body > aside > section {
+/* line 406, ../sass/_base.scss */
+#sidebar > section {
+  font-size: 0.875em;
+  line-height: 1.714em;
   margin: 0 0 1em;
   padding: 0 1em;
 }
-
-/* line 405, ../sass/_base.scss */
-body > aside > section > header {
+/* line 412, ../sass/_base.scss */
+#sidebar > section > header {
   font-weight: bold;
   text-align: center;
 }
-
-/* line 411, ../sass/_base.scss */
-body > aside > section > header,
-body > aside > section > section {
+/* line 418, ../sass/_base.scss */
+#sidebar > section > header,
+#sidebar > section > section {
   margin: 0;
   padding: 1em;
 }
-
-/* line 416, ../sass/_base.scss */
-body > aside > section > footer {
-  margin: 0;
-  padding: 0.25em 1em;
-  text-align: right;
-}
-
-/* line 422, ../sass/_base.scss */
-body > aside > section > nav ul {
+/* line 424, ../sass/_base.scss */
+#sidebar > section > nav ul {
   padding-left: 0;
 }
-
-/* line 426, ../sass/_base.scss */
-body > aside > section > nav ul ul {
+/* line 427, ../sass/_base.scss */
+#sidebar > section > nav ul ul {
   margin-left: 0.5em;
 }
-
-/* line 430, ../sass/_base.scss */
-body > aside > section > nav li {
+/* line 432, ../sass/_base.scss */
+#sidebar > section > nav li {
   list-style: none;
   display: block;
 }
-
-/* line 435, ../sass/_base.scss */
-body > aside > section > nav li a {
+/* line 437, ../sass/_base.scss */
+#sidebar > section > nav li a {
   display: block;
   padding: 0.5em 0.5em 0.5em 1em;
 }
-
-/* line 440, ../sass/_base.scss */
-body > aside > section > nav li.selected > a:before {
+/* line 442, ../sass/_base.scss */
+#sidebar > section > nav li.selected > a:before {
   content: "\2022";
   display: inline-block;
   margin-left: -0.75em;
@@ -533,48 +512,43 @@ body > aside > section > nav li.selected > a:before {
   text-align: center;
   width: 0.5em;
 }
-
-/* line 449, ../sass/_base.scss */
-.quantity {
-  font-weight: normal !important;
-  font-style: normal !important;
-  white-space: nowrap;
-}
-
-/* line 456, ../sass/_base.scss */
-.discreet,
-.document-authorship {
-  font-family: "Linux Biolinum O", "Droid Sans", sans-serif;
-  font-size: 88.8889%;
-}
-
-/* line 461, ../sass/_base.scss */
-p.discreet {
-  margin: 0.6667em 0 1em !important;
-  text-indent: 0 !important;
-}
-
-/* line 466, ../sass/_base.scss */
-p.document-authorship {
-  font-size: 0.778em;
-  line-height: 1.929em;
-  font-style: italic;
-  margin: 0 0 1em !important;
+/* line 452, ../sass/_base.scss */
+#sidebar > section > footer {
+  margin: 0;
+  padding: 0.25em 1em;
   text-align: right;
+}
+
+/* line 459, ../sass/_base.scss */
+.document-authorship {
+  font-size: 0.875em;
+  line-height: 1.714em;
+  cursor: default;
+  font-family: "Lato", "Droid Sans", sans-serif;
+  margin-bottom: 1.5em;
   text-indent: 0 !important;
 }
 
-/* line 474, ../sass/_base.scss */
-.discreet {
-  cursor: default;
-}
-
-/* line 478, ../sass/_base.scss */
+/* line 463, ../sass/_base.scss */
 .document-description {
+  font-family: "Lato", "Droid Sans", sans-serif;
   font-style: italic;
+  margin-bottom: 3em;
+  text-align: center;
+  text-indent: 0;
 }
 
-/* line 482, ../sass/_base.scss */
+/* line 471, ../sass/_base.scss */
+p.document-authorship {
+  font-size: 0.75em;
+  line-height: 2em;
+  font-style: italic;
+  margin-bottom: 0;
+  text-indent: 0;
+  text-align: center;
+}
+
+/* line 479, ../sass/_base.scss */
 .invisible {
   position: absolute;
   left: -1px;
@@ -585,23 +559,30 @@ p.document-authorship {
 }
 
 @media only screen and (max-width: 979px) {
-  /* line 493, ../sass/_base.scss */
-  body > section:before {
+  /* line 490, ../sass/_base.scss */
+  #content:before {
     content: "";
     display: none;
   }
 
-  /* line 498, ../sass/_base.scss */
-  body > section {
+  /* line 495, ../sass/_base.scss */
+  #content {
+    display: block;
+    padding: 1.5em;
+  }
+
+  /* line 500, ../sass/_base.scss */
+  #content > section {
+    margin: 1em -1.5em -1.5em;
+    padding: 0 1.5em 1px;
+  }
+
+  /* line 505, ../sass/_base.scss */
+  #sidebar {
     display: block;
   }
 
-  /* line 502, ../sass/_base.scss */
-  body > aside {
-    display: block;
-  }
-
-  /* line 506, ../sass/_base.scss */
+  /* line 509, ../sass/_base.scss */
   section aside {
     float: none;
     width: auto;
@@ -611,61 +592,61 @@ p.document-authorship {
   }
 }
 @media only screen and (min-width: 640px) and (max-width: 979px) {
-  /* line 518, ../sass/_base.scss */
+  /* line 521, ../sass/_base.scss */
   body {
     max-width: 600px;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 639px) {
-  /* line 526, ../sass/_base.scss */
+  /* line 529, ../sass/_base.scss */
   body {
     max-width: 480px;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 479px) {
-  /* line 534, ../sass/_base.scss */
+  /* line 537, ../sass/_base.scss */
   body {
     max-width: 320px;
   }
 
-  /* line 538, ../sass/_base.scss */
-  body > section {
+  /* line 541, ../sass/_base.scss */
+  #content {
     font-size: 88.8889%;
     /* 16px */
   }
 
-  /* line 542, ../sass/_base.scss */
+  /* line 545, ../sass/_base.scss */
   blockquote {
     margin: 1em;
     padding: 1em;
   }
 
-  /* line 547, ../sass/_base.scss */
+  /* line 550, ../sass/_base.scss */
   blockquote:before {
     /* Left quote margin */
     margin-right: -1em;
   }
 
-  /* line 552, ../sass/_base.scss */
+  /* line 555, ../sass/_base.scss */
   pre {
     font-size: 66.6667%;
   }
 }
 @media only screen and (max-width: 320px) {
-  /* line 560, ../sass/_base.scss */
+  /* line 563, ../sass/_base.scss */
   body {
     width: 320px;
   }
 
-  /* line 564, ../sass/_base.scss */
-  body > section {
+  /* line 567, ../sass/_base.scss */
+  #content {
     font-size: 88.8889%;
     /* 16px */
   }
 }
 /* line 1, ../sass/_forms.scss */
 form {
-  font-family: "Linux Biolinum O";
+  font-family: "Lato", sans-serif;
   font-size: 77.7778%;
   /* 14/18 */
 }
@@ -713,13 +694,13 @@ textarea {
 }
 
 /* line 42, ../sass/_forms.scss */
-body > aside form {
+#sidebar form {
   font-size: 87.5%;
   /* 14/16 */
 }
 
 /* line 46, ../sass/_forms.scss */
-body > aside input[type="text"] {
+#sidebar input[type="text"] {
   width: 100%;
 }
 
@@ -745,62 +726,48 @@ body > aside input[type="text"] {
 
 /* line 1, ../sass/_decoration.scss */
 html {
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(../images/bg.png);
-  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(../images/bg.png);
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(../images/bg.png);
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(../images/bg.png);
-  background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(../images/bg.png);
-  background-image: -webkit-gradient(linear, center top, center bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5))), url(../images/bg.png);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(20, 0, 0, 0)), color-stop(100%, rgba(20, 0, 0, 0.5))), url(../images/bg.png);
+  background: -webkit-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/bg.png);
+  background: -moz-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/bg.png);
+  background: -o-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/bg.png);
+  background: linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/bg.png);
 }
 
-/* line 10, ../sass/_decoration.scss */
-body {
-  background-color: rgba(0, 0, 0, 0.75);
-  box-shadow: 0 1em 5em rgba(0, 0, 0, 0.875);
-  color: #e0cfcf;
+/* line 11, ../sass/_decoration.scss */
+body #content,
+body > aside {
+  color: #ae6854;
+  text-shadow: 0 1px #4b0000, 0 -1px rgba(0, 0, 0, 0.63);
 }
 
-/* line 16, ../sass/_decoration.scss */
+/* line 17, ../sass/_decoration.scss */
 a {
   border-bottom: 1px dotted;
   border-bottom-color: inherit;
-  -moz-transition: background-color 0.5s, color 0.5s, border-color 0.5s, text-shadow 0.5s;
-  -o-transition: background-color 0.5s, color 0.5s, border-color 0.5s, text-shadow 0.5s;
-  -webkit-transition: background-color 0.5s, color 0.5s, border-color 0.5s, text-shadow 0.5s;
-  transition: background-color 0.5s, color 0.5s, border-color 0.5s, text-shadow 0.5s;
-  color: inherit;
+  color: #ae6854;
+  -webkit-transition: background-color 0.25s, color 0.25s, border-color 0.25s, text-shadow 0.25s;
+  -moz-transition: background-color 0.25s, color 0.25s, border-color 0.25s, text-shadow 0.25s;
+  -o-transition: background-color 0.25s, color 0.25s, border-color 0.25s, text-shadow 0.25s;
+  transition: background-color 0.25s, color 0.25s, border-color 0.25s, text-shadow 0.25s;
   text-decoration: none;
-  text-shadow: 0 1em 0.0625em transparent;
 }
 
-/* line 28, ../sass/_decoration.scss */
+/* line 30, ../sass/_decoration.scss */
+a:visited {
+  color: #765e5e;
+}
+
+/* line 34, ../sass/_decoration.scss */
 a:hover {
-  text-shadow: 0 0 0.5em red, 0 0 0.25em white;
-}
-
-/* line 32, ../sass/_decoration.scss */
-body > section a {
   color: white;
 }
 
-/* line 42, ../sass/_decoration.scss */
-h1 :link, h2 :link, h3 :link, h4 :link, h5 :link, h6 :link,
-h1 :visited, h2 :visited, h3 :visited, h4 :visited, h5 :visited, h6 :visited {
-  text-shadow: 0 1em 0.063em transparent, 0 0 0.25em transparent, 0 0.25em 0.5em rgba(0, 0, 0, 0.75);
+/* line 38, ../sass/_decoration.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: white;
 }
 
-/* line 47, ../sass/_decoration.scss */
-h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-  text-shadow: 0 0 0.5em red, 0 0 0.25em white, 0 0.25em 0.5em rgba(0, 0, 0, 0.75);
-}
-
-/* line 52, ../sass/_decoration.scss */
-blockquote {
-  color: #c00000;
-  text-shadow: 0 0 0.5em black;
-}
-
-/* line 57, ../sass/_decoration.scss */
+/* line 45, ../sass/_decoration.scss */
 .verse pre {
   background: none transparent;
   border: none;
@@ -808,89 +775,55 @@ blockquote {
   color: inherit;
 }
 
-/* line 68, ../sass/_decoration.scss */
-fieldset,
-legend,
-pre,
-blockquote,
-aside {
-  background-image: -moz-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/sidebar.png);
-  background-image: -ms-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/sidebar.png);
-  background-image: -o-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/sidebar.png);
-  background-image: -webkit-linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/sidebar.png);
-  background-image: linear-gradient(top, rgba(20, 0, 0, 0), rgba(20, 0, 0, 0.5)), url(../images/sidebar.png);
-  background-image: -webkit-gradient(linear, center top, center bottom, from(rgba(20, 0, 0, 0)), to(rgba(20, 0, 0, 0.5))), url(../images/sidebar.png);
-  box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.63), 0 0 0.5em rgba(32, 0, 0, 0.25) inset, 0 0 0.5em rgba(24, 0, 0, 0.5) inset, 0 0 3em rgba(24, 0, 0, 0.75) inset;
-  color: #ae6854;
-  text-shadow: 0 1px rgba(255, 255, 255, 0.13), 0 -1px rgba(0, 0, 0, 0.63);
-}
-
-/* line 88, ../sass/_decoration.scss */
-fieldset a,
-legend a,
-pre a,
-blockquote a,
-aside a {
-  text-shadow: inherit !important;
-}
-
-/* line 96, ../sass/_decoration.scss */
-fieldset a:hover,
-legend a:hover,
-pre a:hover,
-blockquote a:hover,
-aside a:hover {
-  color: #e0cfcf !important;
-  text-shadow: inherit !important;
-}
-
-/* line 101, ../sass/_decoration.scss */
-body > aside {
-  /* Offset in the last shadow, greater blur radius: this makes the column more
-   * darker, specially in the left side. */
-  box-shadow: 0 0 0.5em rgba(32, 0, 0, 0.25) inset, 0 0 0.5em rgba(24, 0, 0, 0.5) inset, 0.5em 0 4em rgba(24, 0, 0, 0.75) inset;
-}
-
-/* line 110, ../sass/_decoration.scss */
+/* line 52, ../sass/_decoration.scss */
 legend {
-  /* Lighter inset shadow (the last one).  Legends are too small and otherwise
-   * they seem to be too dark. */
   box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.63), 0 0 0.5em rgba(32, 0, 0, 0.25) inset, 0 0 0.5em rgba(24, 0, 0, 0.5) inset, 0 0 1em rgba(24, 0, 0, 0.75) inset;
 }
 
-/* line 126, ../sass/_decoration.scss */
-body > aside > section header,
-body > aside > section header a,
-body > aside > section header a:hover,
-body > aside > section header a:visited,
-section aside h1, section aside h2, section aside h3, section aside h4, section aside h5, section aside h6,
-section aside h1 :link, section aside h2 :link, section aside h3 :link, section aside h4 :link, section aside h5 :link, section aside h6 :link,
-section aside h1 :visited, section aside h2 :visited, section aside h3 :visited, section aside h4 :visited, section aside h5 :visited, section aside h6 :visited {
-  color: #C00000;
+/* line 77, ../sass/_decoration.scss */
+section aside h1,
+section aside h2,
+section aside h3,
+section aside h4,
+section aside h5,
+section aside h6,
+section aside h1 :link,
+section aside h2 :link,
+section aside h3 :link,
+section aside h4 :link,
+section aside h5 :link,
+section aside h6 :link,
+section aside h1 :visited,
+section aside h2 :visited,
+section aside h3 :visited,
+section aside h4 :visited,
+section aside h5 :visited,
+section aside h6 :visited {
+  color: white;
 }
 
-/* line 130, ../sass/_decoration.scss */
+/* line 81, ../sass/_decoration.scss */
 .discreet {
-  opacity: 0.5;
-  -moz-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  opacity: 0.63;
+  -moz-transition: opacity 0.25s;
+  -o-transition: opacity 0.25s;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
 }
 
-/* line 139, ../sass/_decoration.scss */
+/* line 90, ../sass/_decoration.scss */
 .discreet:hover,
 .discreet:focus {
   opacity: 1;
 }
 
 @media screen and (min-width: 980px) {
-  /* line 145, ../sass/_decoration.scss */
+  /* line 96, ../sass/_decoration.scss */
   body {
     margin-top: 4.5em;
   }
 
-  /* line 149, ../sass/_decoration.scss */
+  /* line 100, ../sass/_decoration.scss */
   body > header {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -903,7 +836,7 @@ section aside h1 :visited, section aside h2 :visited, section aside h3 :visited,
     z-index: 1000;
   }
 
-  /* line 161, ../sass/_decoration.scss */
+  /* line 112, ../sass/_decoration.scss */
   body > header:before {
     background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
     background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
@@ -925,42 +858,33 @@ section aside h1 :visited, section aside h2 :visited, section aside h3 :visited,
     width: 100%;
   }
 
-  /* line 182, ../sass/_decoration.scss */
+  /* line 133, ../sass/_decoration.scss */
   body > header > * {
     position: relative;
   }
 }
-/* line 189, ../sass/_decoration.scss */
-body > header h1 a,
-body > header nav li a {
+/* line 142, ../sass/_decoration.scss */
+body > header a {
   border: none;
-  color: #e0cfcf;
+  color: white;
+  text-shadow: 0 1em 0.5em transparent;
 }
-
-/* line 194, ../sass/_decoration.scss */
-body > header nav li a:hover {
+/* line 147, ../sass/_decoration.scss */
+body > header a:hover {
+  color: white;
+  text-shadow: 0 0 0.5em red, 0 0 0.25em white;
+}
+/* line 152, ../sass/_decoration.scss */
+body > header a:hover, body > header a:visited {
   border: none;
 }
-
-/* line 200, ../sass/_decoration.scss */
-body > header nav .selected a,
-body > header nav .selected a:hover,
-body > header nav .selected a:visited {
-  border-color: transparent;
-}
-
-/* line 204, ../sass/_decoration.scss */
+/* line 158, ../sass/_decoration.scss */
 body > header nav .selected a:before {
   text-shadow: 0 0 0.5em red, 0 0 0.25em white;
 }
 
-/* line 208, ../sass/_decoration.scss */
-body > header nav a:hover {
-  border-bottom: 1px dotted #e0cfcf;
-}
-
-/* line 212, ../sass/_decoration.scss */
-body > aside > section > header {
+/* line 164, ../sass/_decoration.scss */
+#sidebar > section > header {
   background-color: rgba(0, 0, 0, 0.25);
   background-image: url(../images/sidebar-box-header-bg.png);
   box-shadow: 0 0 1.25em rgba(16, 0, 0, 0.5) inset;
@@ -968,130 +892,105 @@ body > aside > section > header {
   text-align: center;
 }
 
-/* line 222, ../sass/_decoration.scss */
-body > aside > section > header a,
-body > aside > section > header a:hover,
-body > aside > section > header a:visited {
-  color: inherit;
-  border: none;
-  text-shadow: inherit;
-}
-
-/* line 228, ../sass/_decoration.scss */
-body > aside > section > section:nth-child(2n + 1) {
+/* line 172, ../sass/_decoration.scss */
+#sidebar > section > section:nth-child(2n + 1) {
   background-color: rgba(0, 0, 0, 0.125);
 }
 
-/* line 232, ../sass/_decoration.scss */
-body > aside > section > footer {
+/* line 176, ../sass/_decoration.scss */
+#sidebar > section > footer {
   border-top: 1px dotted;
 }
 
-/* line 238, ../sass/_decoration.scss */
-body > aside > section > footer,
-body > aside > section > nav li a,
-body > aside > section > nav li a:hover {
+/* line 180, ../sass/_decoration.scss */
+#sidebar > section > footer {
   border-color: #400000;
   color: inherit;
   text-shadow: inherit;
 }
 
-/* line 244, ../sass/_decoration.scss */
-body > aside > section > footer a {
-  /* Same as the text color, but can't inherit because footer has a different
-   * border color */
-  border-color: #ae6854;
+/* line 187, ../sass/_decoration.scss */
+#sidebar > section > nav li a,
+#sidebar > section > nav li a:hover {
+  border-color: #400000;
 }
 
-/* line 251, ../sass/_decoration.scss */
-body > aside > section > nav li.selected > a,
-body > aside > section > nav li.selected > a:hover {
-  color: #e0cfcf;
-}
-
-/* line 255, ../sass/_decoration.scss */
-body > aside > section > nav li a:hover {
+/* line 191, ../sass/_decoration.scss */
+#sidebar > section > nav li a:hover {
   background-color: rgba(0, 0, 0, 0.38);
 }
 
-/* line 259, ../sass/_decoration.scss */
-body > section a {
-  color: white;
+/* line 195, ../sass/_decoration.scss */
+#content a {
   border-bottom-color: #a06060;
 }
 
-/* line 264, ../sass/_decoration.scss */
-body > section a:visited {
-  color: #9f8080;
-}
-
-/* line 268, ../sass/_decoration.scss */
-body > section a:visited:after {
+/* line 199, ../sass/_decoration.scss */
+#content a:visited:after {
   content: "\2713";
   font-size: 66.6667%;
 }
 
-/* line 273, ../sass/_decoration.scss */
-body > section a:hover {
-  border-bottom-color: #e0cfcf;
-  color: inherit;
+/* line 204, ../sass/_decoration.scss */
+#content a:hover {
+  border-bottom-color: #ae6854;
 }
 
-/* line 278, ../sass/_decoration.scss */
-body > section > section {
+/* line 208, ../sass/_decoration.scss */
+#content > section {
   background-color: rgba(0, 0, 0, 0.25);
   border-top: 1px solid rgba(255, 255, 255, 0.063);
 }
 
-/* line 283, ../sass/_decoration.scss */
+/* line 213, ../sass/_decoration.scss */
 body > footer {
   background-color: rgba(0, 0, 0, 0.5);
   border-top: 1px solid rgba(255, 255, 255, 0.063);
 }
 
-/* line 288, ../sass/_decoration.scss */
+/* line 218, ../sass/_decoration.scss */
 body > footer nav a {
-  color: #e0cfcf;
+  color: #ae6854;
   border: none;
 }
 
 /* Forms */
-/* line 295, ../sass/_decoration.scss */
+/* line 225, ../sass/_decoration.scss */
 fieldset {
   border: none;
 }
 
-/* line 299, ../sass/_decoration.scss */
+/* line 229, ../sass/_decoration.scss */
 legend {
   padding: 0 1em;
 }
 
-/* line 304, ../sass/_decoration.scss */
+/* line 234, ../sass/_decoration.scss */
 input[type="text"],
 textarea {
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
 }
 
-/* line 312, ../sass/_decoration.scss */
+/* line 242, ../sass/_decoration.scss */
 input[type="text"],
 textarea {
   background-color: #200000;
   border: none;
   border-radius: 5px;
   box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.75) inset;
-  color: #e0cfcf;
+  color: #ae6854;
 }
 
-/* line 321, ../sass/_decoration.scss */
+/* line 251, ../sass/_decoration.scss */
 input[type="text"]:hover,
 textarea:hover {
   background-color: #200C0C;
 }
 
-/* line 326, ../sass/_decoration.scss */
+/* line 256, ../sass/_decoration.scss */
 input[type="text"]:focus,
 textarea:focus {
   background-color: white;
@@ -1099,12 +998,12 @@ textarea:focus {
   color: #201818;
 }
 
-/* line 334, ../sass/_decoration.scss */
+/* line 264, ../sass/_decoration.scss */
 .required-indicator {
   color: #c00000;
 }
 
-/* line 338, ../sass/_decoration.scss */
+/* line 268, ../sass/_decoration.scss */
 .searchbox form {
   margin-left: -1.143em;
   /* 16/14 */

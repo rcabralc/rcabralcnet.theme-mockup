@@ -13,18 +13,39 @@ $gutter:      20px;
 $half-gutter: $gutter / 2;
 
 $browser-default-font-size: 16px;
-$base-font-size:            18px;
-$base-line-height:          1.5 * $base-font-size;
+$base-font-size:            16px;
+$base-line-height-factor:   1.5;
+$base-line-height:          $base-line-height-factor * $base-font-size;
 $pre-font-size:             14px;
 $box-base-font-size:        16px;
+$sidebar-font-size:         14px;
 
-$h1-font-size: 33px;
+$default-font-family:    "Lato", "Droid Sans", sans-serif;
+$headings-font-family:   $default-font-family;
+$monospaced-font-family: "Oxygen Mono",
+                         "Inconsolata",
+                         "Consolas",
+                         monospace;
+
+$body-bg-color:      #e0e0e0;
+$body-text-color:    #ae6854;
+$heading-color:      white;
+$default-link-color: $body-text-color;
+$visited-link-color: #765e5e;
+$hover-link-color:   white;
+$sidebar-link-color: inherit;
+
+$h1-font-size: 36px;
 $h2-font-size: 27px;
 $h3-font-size: 24px;
 $h4-font-size: 21px;
 $h5-font-size: 18px;
 $h6-font-size: 16px;
 
+$pullquote-font-size: 18px;
+$pre-font-size:       14px;
+
+@import "font";
 @import "base";
 @import "forms";
 @import "decoration";

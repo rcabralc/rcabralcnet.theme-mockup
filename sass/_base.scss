@@ -1,36 +1,36 @@
-@font-face {
-  font-family: 'Gentium Basic';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Gentium Basic'), local('GentiumBasic'), url('../fonts/GenBasR.ttf');
+@function to-em($px-value, $from-size: $base-font-size) {
+  @return 1em * ($px-value / $base-font-size);
 }
-@font-face {
-  font-family: 'Gentium Basic';
-  font-style: italic;
-  font-weight: normal;
-  src: local('Gentium Basic Italic'), local('GentiumBasic-Italic'), url('../fonts/GenBasI.ttf');
+
+@mixin discreet {
+  @include adjust-font-size-to(14px);
+  cursor: default;
+  font-family: "Lato", "Droid Sans", sans-serif;
+  margin-bottom: rhythm(1, $base-font-size);
+  text-indent: 0 !important;
 }
-@font-face {
-  font-family: 'Gentium Basic';
-  font-style: normal;
-  font-weight: bold;
-  src: local('Gentium Basic Bold'), local('GentiumBasic-Bold'), url('../fonts/GenBasB.ttf');
-}
-@font-face {
-  font-family: 'Gentium Basic';
-  font-style: italic;
-  font-weight: bold;
-  src: local('Gentium Basic Bold Italic'), local('GentiumBasic-BoldItalic'), url('../fonts/GenBasBI.ttf');
+
+@mixin body-text {
+  .quantity {
+    font-style: normal !important;
+    font-weight: normal !important;
+    white-space: nowrap;
+  }
+
+  p.discreet {
+    @include discreet;
+  }
 }
 
 html {
-  font-family: "Gentium", "Droid Serif", serif;
-  font-size: 18px;
+  font-family: $default-font-family;
+  font-size: $base-font-size;
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
-  line-height: 1.5;
+  line-height: $base-line-height-factor;
   min-height: 100%;
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -39,76 +39,88 @@ body {
   max-width: 980px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headings-font-family;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 300;
+}
+
+h5, h6 {
+  font-weight: normal;
+}
+
 h1 {
-  font-size: 183.3333%;
+  $lines: lines-for-font-size($h1-font-size);
+
+  font-size: to-em($h1-font-size);
+  line-height: rhythm(0.8333 * $lines, $h1-font-size);
+  margin-bottom: rhythm((0.1667 * $lines) + 1, $h1-font-size);
+  text-align: center;
 }
 
 h2 {
-  font-size: 150%;
+  @include adjust-font-size-to($h2-font-size);
+  margin-top: rhythm(1.5, $h2-font-size);
+  margin-bottom: rhythm(0.5, $h2-font-size);
 }
 
 h3 {
-  font-size: 133.3333%;
+  @include adjust-font-size-to($h3-font-size, 1);
+  margin-top: rhythm(1.5, $h3-font-size);
+  margin-bottom: rhythm(0.5, $h3-font-size);
 }
 
 h4 {
-  font-size: 116.6667%;
+  @include adjust-font-size-to($h4-font-size);
+  margin-top: rhythm(1.5, $h4-font-size);
+  margin-bottom: rhythm(0.5, $h4-font-size);
 }
 
 h5 {
-  font-size: 100%;
+  @include adjust-font-size-to($h5-font-size);
+  margin-top: rhythm(1.5, $h5-font-size);
+  margin-bottom: rhythm(0.5, $h5-font-size);
 }
 
 h6 {
-  font-size: 88.8889%;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Linux Biolinum O", "Droid Sans", sans-serif;
-  font-weight: normal;
-  line-height: 1.125em;
-  margin: 1em 0 0.6667em;
-}
-
-h1, h2 {
-  letter-spacing: -0.05em;
-}
-
-h3, h4, h5, h6 {
-  font-family: "Linux Biolinum Capitals", sans-serif;
-  text-transform: lowercase;
+  @include adjust-font-size-to($h6-font-size);
+  margin-top: rhythm(1.5, $h6-font-size);
+  margin-bottom: rhythm(0.5, $h6-font-size);
 }
 
 p {
-  margin: 0.6667em 0 0;
+  margin: 0;
   word-spacing: 0.05em;
   word-wrap: break-word;
 }
 
-dt {
-  font-weight: bold;
-}
-
 ol,
 ul {
-  padding-left: 2.25em;
-  margin: 1em 0;
-}
-
-ul ol,
-ol ul,
-ol ol,
-ul ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-ul,
-ol {
   list-style-position: outside;
+  padding-left: 0;
+  margin: rhythm(1) 0;
+
+  ol,
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 2.25em;
+  }
+
 }
 
-abbr, acronym {
+dl {
+  margin: rhythm(1) 0;
+
+  dt {
+    font-style: italic;
+    font-weight: bold;
+  }
+}
+
+abbr {
   font-variant: small-caps;
   letter-spacing: 0.05em;
   text-transform: lowercase;
@@ -116,29 +128,28 @@ abbr, acronym {
 
 code,
 pre {
-  font-family: "Ubuntu Mono","DejaVu Sans Mono","Inconsolata","Consolas",monospace;
+  font-family: $monospaced-font-family;
 }
 
 code {
-  font-size: 88.8889%;
+  @include adjust-font-size-to($pre-font-size);
 }
 
 pre > code {
-  font-size: 100%;
+  font-size: 10px;
 }
 
 pre {
-  font-size: 77.7778%;
-  line-height: 20px;
-  margin: 1.5em;
+  @include adjust-font-size-to($pre-font-size);
+  margin: rhythm(1, $pre-font-size) 2.5em;
   overflow: auto;
-  padding: 1em;
+  padding: rhythm(0.5, $pre-font-size);
 }
 
 blockquote {
   font-style: italic;
   margin: 1.5em;
-  padding: 1em 2em;
+  padding: rhythm(0.5) 2em;
   position: relative;
 }
 
@@ -188,6 +199,7 @@ blockquote.verse:after {
   display: table;
   font-family: inherit;
   font-size: inherit;
+  line-height: rhythm(1);
   margin: 0 auto;
   padding: 0;
   width: auto;
@@ -203,7 +215,9 @@ body > header {
 
 body > header h1 {
   float: left;
-  font: bold 200%/1em 'Linux Biolinum O', "Droid Sans", sans-serif;
+  font-size: 200%;
+  font-weight: bold;
+  line-height: 1;
   font-weight: normal;
   margin: 0;
 }
@@ -215,7 +229,6 @@ body > header h1 a {
 body > header nav {
   clear: right;
   float: right;
-  font-family: "Linux Biolinum O", "Droid Sans", sans-serif;
   line-height: 2em;
 }
 
@@ -261,15 +274,19 @@ body > header nav li.selected a:before {
   text-align: center;
 }
 
-body > section {
+#content {
+  // @include debug-vertical-alignment;
+  @include body-text;
+  clear: both;
   display: table-cell;
   font-size: 100%; /* 18px; */
+  padding: 1.5em 2.5em;
   vertical-align: top;
 }
 
 /* Couldn't find a better way to prevent few-contented pages to not shrink due
 * to display: table-cell... */
-body > section:before {
+#content:before {
   content: "a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a";
   display: block;
   height: 0;
@@ -277,29 +294,28 @@ body > section:before {
   visibility: hidden;
 }
 
-body > section + aside {
+#content + aside {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   display: table-cell;
+  font-size: 16px;
+  line-height: 1.5em;
+  padding: 2.5em 0;
   vertical-align: top;
   width: 26%;
 }
 
-body > section p:not(.discreet):not(.document-authorship) + p {
+#content p:not(.discreet):not(.document-authorship) + p,
+#content ul + p,
+#content ol + p,
+#content aside + p {
   text-indent: 1.5em;
-  margin-top: 0;
 }
 
-body > section strong,
-body > section strong em,
-body > section em strong,
-body > section dt {
-  font-family: "Gentium Basic", "Droid Serif", serif;
-}
-
-body > aside,
-body > section aside,
-body > section aside strong,
-body > section aside em {
-  font-family: "Linux Biolinum O", "Droid Sans", sans-serif;
+#content aside,
+#content aside strong,
+#content aside em {
+  font-family: "Lato", "Droid Sans", sans-serif;
 }
 
 section > section h1 {
@@ -327,13 +343,13 @@ section > section h6 {
 }
 
 section aside {
+  @include adjust-font-size-to($pullquote-font-size);
   float: right;
-  font-size: 88.8889%; /* 16px */
-  margin-left: 1.75em;
-  margin-bottom: 1.75em;
+  margin-left: rhythm(1, $pullquote-font-size);
+  margin-bottom: rhythm(1, $pullquote-font-size);
   margin-right: 0;
-  margin-top: 0.75em;
-  padding: 1em;
+  margin-top: 0;
+  padding: rhythm(0.5, $pullquote-font-size);
   width: 33%;
 }
 
@@ -346,137 +362,118 @@ section aside h6:first-child {
   margin-top: 0;
 }
 
-body > section {
-  clear: both;
-  padding: 1.5em;
-}
-
-body > section + aside {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 16px;
-  line-height: 1.5em;
-  padding: 2.5em 0;
-}
-
-body > section .document-authorship + p:not(.discreet):first-line,
-body > section .document-authorship + .discreet + p:first-line,
-body > section h1 + p:not(.document-description):first-line {
-  font-size: 111.1111%;
+#content .document-description + p:not(.discreet)::first-line,
+#content .document-description + .discreet + p::first-line,
+#content h1 + p:not(.document-authorship):not(.document-description)::first-line {
+  @include adjust-font-size-to(20px);
   font-variant: small-caps;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
 }
 
-body > section > h1:nth-of-type(1) {
+#content > h1:nth-of-type(1) {
   margin-top: 0;
 }
 
-body > section > section {
-  margin: 1em -1.5em -1.5em;
+#content > section {
+  margin: 1em -2.5em -1.5em;
   padding: 0 1.5em 1px;
 }
 
-body > footer {
-  font-family: "Linux Biolinum O", "Droid Sans", sans-serif;
-  font-size: 77.7778%;
-  padding-bottom: 1.5em;
-  padding-top: 0.5em;
+body {
+  > footer {
+    @include adjust-font-size-to(12px);
+
+    font-family: "Lato","Linux Biolinum O", "Droid Sans", sans-serif;
+    padding-bottom: 1.5em;
+    padding-top: 0.5em;
+
+    p {
+      margin: 0.5em 0;
+      text-align: center;
+    }
+
+    nav {
+      text-align: center;
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
 }
 
-body > footer p {
-  margin: 0.5em 0;
-  text-align: center;
-}
+#sidebar > section {
+  @include adjust-font-size-to($sidebar-font-size);
 
-body > footer nav {
-  text-align: center;
-}
-
-body > footer nav ul {
-  margin: 0;
-  padding: 0;
-}
-
-body > aside > section {
   margin: 0 0 1em;
   padding: 0 1em;
+
+  > header {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  > header,
+  > section {
+    margin: 0;
+    padding: 1em;
+  }
+
+  > nav {
+    ul {
+      padding-left: 0;
+
+      ul {
+        margin-left: 0.5em;
+      }
+    }
+
+    li {
+      list-style: none;
+      display: block;
+    }
+
+    li a {
+      display: block;
+      padding: 0.5em 0.5em 0.5em 1em;
+    }
+
+    li.selected > a:before {
+      content: "\2022";
+      display: inline-block;
+      margin-left: -0.75em;
+      margin-right: 0.25em;
+      text-align: center;
+      width: 0.5em;
+    }
+  }
+
+  > footer {
+    margin: 0;
+    padding: 0.25em 1em;
+    text-align: right;
+  }
 }
 
-body > aside > section > header {
-  font-weight: bold;
-  text-align: center;
-}
-
-body > aside > section > header,
-body > aside > section > section {
-  margin: 0;
-  padding: 1em;
-}
-
-body > aside > section > footer {
-  margin: 0;
-  padding: 0.25em 1em;
-  text-align: right;
-}
-
-body > aside > section > nav ul {
-  padding-left: 0;
-}
-
-body > aside > section > nav ul ul {
-  margin-left: 0.5em;
-}
-
-body > aside > section > nav li {
-  list-style: none;
-  display: block;
-}
-
-body > aside > section > nav li a {
-  display: block;
-  padding: 0.5em 0.5em 0.5em 1em;
-}
-
-body > aside > section > nav li.selected > a:before {
-  content: "\2022";
-  display: inline-block;
-  margin-left: -0.75em;
-  margin-right: 0.25em;
-  text-align: center;
-  width: 0.5em;
-}
-
-.quantity {
-  font-weight: normal !important;
-  font-style: normal !important;
-  white-space: nowrap;
-}
-
-.discreet,
 .document-authorship {
-  font-family: "Linux Biolinum O", "Droid Sans", sans-serif;
-  font-size: 88.8889%;
-}
-
-p.discreet {
-  margin: 0.6667em 0 1em !important;
-  text-indent: 0 !important;
-}
-
-p.document-authorship {
-  @include adjust-font-size-to(14px);
-  font-style: italic;
-  margin: 0 0 1em !important;
-  text-align: right;
-  text-indent: 0 !important;
-}
-
-.discreet {
-  cursor: default;
+  @include discreet;
 }
 
 .document-description {
+  font-family: "Lato", "Droid Sans", sans-serif;
   font-style: italic;
+  margin-bottom: rhythm(2);
+  text-align: center;
+  text-indent: 0;
+}
+
+p.document-authorship {
+  @include adjust-font-size-to(12px);
+  font-style: italic;
+  margin-bottom: 0;
+  text-indent: 0;
+  text-align: center;
 }
 
 .invisible {
@@ -490,16 +487,22 @@ p.document-authorship {
 
 @media only screen and (max-width: 979px) {
 
-  body > section:before {
+  #content:before {
     content: "";
     display: none;
   }
 
-  body > section {
+  #content {
     display: block;
+    padding: 1.5em;
   }
 
-  body > aside {
+  #content > section {
+    margin: 1em -1.5em -1.5em;
+    padding: 0 1.5em 1px;
+  }
+
+  #sidebar {
     display: block;
   }
 
@@ -535,7 +538,7 @@ p.document-authorship {
     max-width: 320px;
   }
 
-  body > section {
+  #content {
     font-size: 88.8889%; /* 16px */
   }
 
@@ -561,7 +564,7 @@ p.document-authorship {
     width: 320px;
   }
 
-  body > section {
+  #content {
     font-size: 88.8889%; /* 16px */
   }
 

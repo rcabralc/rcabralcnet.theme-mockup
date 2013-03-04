@@ -1,5 +1,5 @@
 form {
-  font-family: "Linux Biolinum O";
+  font-family: "Lato", sans-serif;
   font-size: 77.7778%; /* 14/18 */
 }
 
@@ -39,11 +39,11 @@ textarea {
   width: 100%;
 }
 
-body > aside form {
+#sidebar form {
   font-size: 87.5%; /* 14/16 */
 }
 
-body > aside input[type="text"] {
+#sidebar input[type="text"] {
   width: 100%;
 }
 
